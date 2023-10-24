@@ -1,6 +1,6 @@
 ﻿namespace DoAnStarbucks
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             this.toolStripMenuItemKhachHang = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemLoaiSanPham = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemSanPham = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemKMLoaiSp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemKMLoaiSP = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             this.quanLyToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1755, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1587, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,7 +71,7 @@
             this.toolStripMenuItemKhachHang,
             this.toolStripMenuItemLoaiSanPham,
             this.toolStripMenuItemSanPham,
-            this.toolStripMenuItemKMLoaiSp});
+            this.toolStripMenuItemKMLoaiSP});
             this.quanLyToolStripMenuItem.Name = "quanLyToolStripMenuItem";
             this.quanLyToolStripMenuItem.Size = new System.Drawing.Size(117, 38);
             this.quanLyToolStripMenuItem.Text = "Quản lý";
@@ -134,7 +134,7 @@
             // 
             this.toolStripMenuItemLoaiSanPham.Name = "toolStripMenuItemLoaiSanPham";
             this.toolStripMenuItemLoaiSanPham.Size = new System.Drawing.Size(486, 44);
-            this.toolStripMenuItemLoaiSanPham.Text = "Loại Sản phẩm";
+            this.toolStripMenuItemLoaiSanPham.Text = "Loại sản phẩm";
             // 
             // toolStripMenuItemSanPham
             // 
@@ -142,21 +142,21 @@
             this.toolStripMenuItemSanPham.Size = new System.Drawing.Size(486, 44);
             this.toolStripMenuItemSanPham.Text = "Sản phẩm";
             // 
-            // toolStripMenuItemKMLoaiSp
+            // toolStripMenuItemKMLoaiSP
             // 
-            this.toolStripMenuItemKMLoaiSp.Name = "toolStripMenuItemKMLoaiSp";
-            this.toolStripMenuItemKMLoaiSp.Size = new System.Drawing.Size(486, 44);
-            this.toolStripMenuItemKMLoaiSp.Text = "Khuyến mãi theo loại sản phẩm";
+            this.toolStripMenuItemKMLoaiSP.Name = "toolStripMenuItemKMLoaiSP";
+            this.toolStripMenuItemKMLoaiSP.Size = new System.Drawing.Size(486, 44);
+            this.toolStripMenuItemKMLoaiSP.Text = "Khuyễn mãi theo loại sản phẩm";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1755, 987);
+            this.ClientSize = new System.Drawing.Size(1587, 943);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "MainForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -179,7 +179,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemKhachHang;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemLoaiSanPham;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSanPham;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemKMLoaiSp;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemKMLoaiSP;
     }
 }
-
