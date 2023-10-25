@@ -32,12 +32,10 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbIDsp = new System.Windows.Forms.Label();
             this.lbTen = new System.Windows.Forms.Label();
             this.lbLoaiSP = new System.Windows.Forms.Label();
             this.lbGia = new System.Windows.Forms.Label();
             this.lbMieuta = new System.Windows.Forms.Label();
-            this.tbIDsp = new System.Windows.Forms.TextBox();
             this.tbTen = new System.Windows.Forms.TextBox();
             this.tbGia = new System.Windows.Forms.TextBox();
             this.tbMieuta = new System.Windows.Forms.TextBox();
@@ -80,6 +78,8 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnUploadImage = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.tabThucUong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
@@ -126,22 +126,11 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "SẢN PHẨM";
             // 
-            // lbIDsp
-            // 
-            this.lbIDsp.AutoSize = true;
-            this.lbIDsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIDsp.Location = new System.Drawing.Point(50, 100);
-            this.lbIDsp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbIDsp.Name = "lbIDsp";
-            this.lbIDsp.Size = new System.Drawing.Size(115, 24);
-            this.lbIDsp.TabIndex = 3;
-            this.lbIDsp.Text = "ID sản phẩm";
-            // 
             // lbTen
             // 
             this.lbTen.AutoSize = true;
             this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTen.Location = new System.Drawing.Point(50, 132);
+            this.lbTen.Location = new System.Drawing.Point(50, 110);
             this.lbTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTen.Name = "lbTen";
             this.lbTen.Size = new System.Drawing.Size(44, 24);
@@ -152,7 +141,7 @@
             // 
             this.lbLoaiSP.AutoSize = true;
             this.lbLoaiSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoaiSP.Location = new System.Drawing.Point(50, 168);
+            this.lbLoaiSP.Location = new System.Drawing.Point(50, 146);
             this.lbLoaiSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbLoaiSP.Name = "lbLoaiSP";
             this.lbLoaiSP.Size = new System.Drawing.Size(133, 24);
@@ -163,7 +152,7 @@
             // 
             this.lbGia.AutoSize = true;
             this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGia.Location = new System.Drawing.Point(50, 207);
+            this.lbGia.Location = new System.Drawing.Point(50, 185);
             this.lbGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(38, 24);
@@ -174,24 +163,16 @@
             // 
             this.lbMieuta.AutoSize = true;
             this.lbMieuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMieuta.Location = new System.Drawing.Point(50, 243);
+            this.lbMieuta.Location = new System.Drawing.Point(50, 221);
             this.lbMieuta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbMieuta.Name = "lbMieuta";
             this.lbMieuta.Size = new System.Drawing.Size(71, 24);
             this.lbMieuta.TabIndex = 3;
             this.lbMieuta.Text = "Miêu tả";
             // 
-            // tbIDsp
-            // 
-            this.tbIDsp.Location = new System.Drawing.Point(208, 100);
-            this.tbIDsp.Margin = new System.Windows.Forms.Padding(2);
-            this.tbIDsp.Name = "tbIDsp";
-            this.tbIDsp.Size = new System.Drawing.Size(153, 20);
-            this.tbIDsp.TabIndex = 5;
-            // 
             // tbTen
             // 
-            this.tbTen.Location = new System.Drawing.Point(208, 132);
+            this.tbTen.Location = new System.Drawing.Point(208, 110);
             this.tbTen.Margin = new System.Windows.Forms.Padding(2);
             this.tbTen.Name = "tbTen";
             this.tbTen.Size = new System.Drawing.Size(153, 20);
@@ -199,7 +180,7 @@
             // 
             // tbGia
             // 
-            this.tbGia.Location = new System.Drawing.Point(208, 213);
+            this.tbGia.Location = new System.Drawing.Point(208, 191);
             this.tbGia.Margin = new System.Windows.Forms.Padding(2);
             this.tbGia.Name = "tbGia";
             this.tbGia.Size = new System.Drawing.Size(153, 20);
@@ -207,7 +188,7 @@
             // 
             // tbMieuta
             // 
-            this.tbMieuta.Location = new System.Drawing.Point(208, 249);
+            this.tbMieuta.Location = new System.Drawing.Point(208, 227);
             this.tbMieuta.Margin = new System.Windows.Forms.Padding(2);
             this.tbMieuta.Name = "tbMieuta";
             this.tbMieuta.Size = new System.Drawing.Size(153, 20);
@@ -220,7 +201,7 @@
             "thức ăn ",
             "thức uống ",
             "cà phê nguyên hạt"});
-            this.cbLoaiSP.Location = new System.Drawing.Point(208, 168);
+            this.cbLoaiSP.Location = new System.Drawing.Point(208, 146);
             this.cbLoaiSP.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiSP.Name = "cbLoaiSP";
             this.cbLoaiSP.Size = new System.Drawing.Size(153, 21);
@@ -635,11 +616,33 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(50, 263);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 24);
+            this.label2.TabIndex = 67;
+            this.label2.Text = "Ảnh";
+            // 
+            // btnUploadImage
+            // 
+            this.btnUploadImage.Location = new System.Drawing.Point(208, 265);
+            this.btnUploadImage.Name = "btnUploadImage";
+            this.btnUploadImage.Size = new System.Drawing.Size(153, 23);
+            this.btnUploadImage.TabIndex = 68;
+            this.btnUploadImage.Text = "Thêm ảnh";
+            this.btnUploadImage.UseVisualStyleBackColor = true;
+            // 
             // SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 480);
+            this.Controls.Add(this.btnUploadImage);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
@@ -648,12 +651,10 @@
             this.Controls.Add(this.tbMieuta);
             this.Controls.Add(this.tbGia);
             this.Controls.Add(this.tbTen);
-            this.Controls.Add(this.tbIDsp);
             this.Controls.Add(this.lbMieuta);
             this.Controls.Add(this.lbGia);
             this.Controls.Add(this.lbLoaiSP);
             this.Controls.Add(this.lbTen);
-            this.Controls.Add(this.lbIDsp);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SanPham";
@@ -689,12 +690,10 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbIDsp;
         private System.Windows.Forms.Label lbTen;
         private System.Windows.Forms.Label lbLoaiSP;
         private System.Windows.Forms.Label lbGia;
         private System.Windows.Forms.Label lbMieuta;
-        private System.Windows.Forms.TextBox tbIDsp;
         private System.Windows.Forms.TextBox tbTen;
         private System.Windows.Forms.TextBox tbGia;
         private System.Windows.Forms.TextBox tbMieuta;
@@ -737,5 +736,7 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnUploadImage;
     }
 }

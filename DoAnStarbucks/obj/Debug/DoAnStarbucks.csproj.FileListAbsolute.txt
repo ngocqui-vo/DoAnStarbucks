@@ -16,3 +16,9 @@ D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Prom
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.ProductType.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Position.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.SanPham.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Customer.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.CustomerType.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.OpeningHours.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Order.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.PaymentMethodForm.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Shift.resources

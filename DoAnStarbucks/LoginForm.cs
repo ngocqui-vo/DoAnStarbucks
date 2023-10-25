@@ -21,7 +21,7 @@ namespace DoAnStarbucks
         {
             Hide();
             MainForm mainForm = new MainForm();
-           
+            mainForm.FormClosed += (s, args) => Close();
             mainForm.Show();
             
             
