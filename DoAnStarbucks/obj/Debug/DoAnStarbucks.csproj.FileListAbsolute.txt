@@ -1,0 +1,13 @@
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\bin\Debug\DoAnStarbucks.exe.config
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\bin\Debug\DoAnStarbucks.exe
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\bin\Debug\DoAnStarbucks.pdb
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.csproj.AssemblyReference.cache
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Properties.Resources.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.csproj.GenerateResource.cache
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.csproj.CoreCompileInputs.cache
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.exe
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.pdb
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.ChiNhanhForm.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.LoginForm.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.MainForm.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.RegisterForm.resources
