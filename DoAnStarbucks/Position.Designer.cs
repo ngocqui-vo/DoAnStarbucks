@@ -36,7 +36,7 @@ namespace DoAnStarbucks
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.btnNamePosition = new System.Windows.Forms.TextBox();
+            this.txtNamePosition = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -59,7 +59,7 @@ namespace DoAnStarbucks
             this.columnHeader2});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(331, 74);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(258, 244);
             this.listView1.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace DoAnStarbucks
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(162, 235);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(72, 24);
             this.btnXoa.TabIndex = 63;
@@ -89,7 +89,7 @@ namespace DoAnStarbucks
             // btnCapNhat
             // 
             this.btnCapNhat.Location = new System.Drawing.Point(84, 236);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(74, 23);
             this.btnCapNhat.TabIndex = 62;
@@ -99,20 +99,20 @@ namespace DoAnStarbucks
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(12, 238);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(68, 21);
             this.btnThem.TabIndex = 61;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // btnNamePosition
+            // txtNamePosition
             // 
-            this.btnNamePosition.Location = new System.Drawing.Point(103, 81);
-            this.btnNamePosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnNamePosition.Name = "btnNamePosition";
-            this.btnNamePosition.Size = new System.Drawing.Size(133, 20);
-            this.btnNamePosition.TabIndex = 64;
+            this.txtNamePosition.Location = new System.Drawing.Point(103, 81);
+            this.txtNamePosition.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNamePosition.Name = "txtNamePosition";
+            this.txtNamePosition.Size = new System.Drawing.Size(133, 20);
+            this.txtNamePosition.TabIndex = 64;
             // 
             // label3
             // 
@@ -145,13 +145,13 @@ namespace DoAnStarbucks
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnNamePosition);
+            this.Controls.Add(this.txtNamePosition);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Position";
             this.Text = "Position";
             this.ResumeLayout(false);
@@ -167,7 +167,7 @@ namespace DoAnStarbucks
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox btnNamePosition;
+        private System.Windows.Forms.TextBox txtNamePosition;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }
