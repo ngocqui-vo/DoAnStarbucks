@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace DoAnStarbucks
 {
-    public partial class BranchesManager : Form
+    public partial class Employee : Form
     {
-        public BranchesManager()
+        public Employee()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
