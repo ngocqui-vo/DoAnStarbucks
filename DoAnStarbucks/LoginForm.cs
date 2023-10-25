@@ -16,5 +16,15 @@ namespace DoAnStarbucks
         {
             InitializeComponent();
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            Hide();
+            MainForm mainForm = new MainForm();
+           
+            mainForm.Show();
+            
+            
+        }
     }
 }

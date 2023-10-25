@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace DoAnStarbucks
 {
-    public partial class MainForm : Form
+    public partial class Order : Form
     {
-        public MainForm()
+        public Order()
         {
             InitializeComponent();
-        }
-
-        private void toolStripMenuItemChiNhanh_Click(object sender, EventArgs e)
-        {
-            BranchesManager branchesManager = new BranchesManager();
-            branchesManager.Show();
         }
     }
 }

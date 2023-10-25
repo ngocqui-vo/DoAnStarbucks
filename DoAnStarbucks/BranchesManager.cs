@@ -26,5 +26,10 @@ namespace DoAnStarbucks
         {
 
         }
+
+        private void BranchesManager_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

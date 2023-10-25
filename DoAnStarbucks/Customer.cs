@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnStarbucks
 {
-    public partial class PromotionProductType : Form
+    public partial class Customer : Form
     {
-        public PromotionProductType()
+        public Customer()
         {
             InitializeComponent();
         }
