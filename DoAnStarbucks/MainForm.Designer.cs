@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quanLyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemChiNhanh = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +43,8 @@
             this.toolStripMenuItemLoaiSanPham = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemSanPham = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemKMLoaiSP = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemSaleReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbGioiThieu = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +56,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(794, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(852, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,7 +74,8 @@
             this.toolStripMenuItemKhachHang,
             this.toolStripMenuItemLoaiSanPham,
             this.toolStripMenuItemSanPham,
-            this.toolStripMenuItemKMLoaiSP});
+            this.toolStripMenuItemKMLoaiSP,
+            this.toolStripMenuItemSaleReport});
             this.quanLyToolStripMenuItem.Name = "quanLyToolStripMenuItem";
             this.quanLyToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
             this.quanLyToolStripMenuItem.Text = "Quản lý";
@@ -160,15 +164,37 @@
             this.toolStripMenuItemKMLoaiSP.Text = "Khuyễn mãi theo loại sản phẩm";
             this.toolStripMenuItemKMLoaiSP.Click += new System.EventHandler(this.toolStripMenuItemKMLoaiSP_Click);
             // 
+            // toolStripMenuItemSaleReport
+            // 
+            this.toolStripMenuItemSaleReport.Name = "toolStripMenuItemSaleReport";
+            this.toolStripMenuItemSaleReport.Size = new System.Drawing.Size(241, 22);
+            this.toolStripMenuItemSaleReport.Text = "Báo cáo doanh thu";
+            // 
+            // lbGioiThieu
+            // 
+            this.lbGioiThieu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbGioiThieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGioiThieu.ForeColor = System.Drawing.Color.Black;
+            this.lbGioiThieu.Location = new System.Drawing.Point(0, 24);
+            this.lbGioiThieu.Name = "lbGioiThieu";
+            this.lbGioiThieu.Size = new System.Drawing.Size(852, 39);
+            this.lbGioiThieu.TabIndex = 1;
+            this.lbGioiThieu.Text = "Phần mềm quản lý chuỗi cà phê StarBuck";
+            this.lbGioiThieu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 490);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(852, 496);
+            this.Controls.Add(this.lbGioiThieu);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
+            this.RightToLeftLayout = true;
             this.Text = "MainForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -193,5 +219,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemLoaiSanPham;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSanPham;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemKMLoaiSP;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSaleReport;
+        private System.Windows.Forms.Label lbGioiThieu;
     }
 }

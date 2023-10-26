@@ -45,6 +45,17 @@ namespace DoAnStarbucks
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnGanCa = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -55,10 +66,10 @@ namespace DoAnStarbucks
             this.columnHeader3,
             this.columnHeader4});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(363, 89);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Location = new System.Drawing.Point(425, 89);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(521, 388);
+            this.listView1.Size = new System.Drawing.Size(576, 205);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -91,7 +102,7 @@ namespace DoAnStarbucks
             this.label1.Location = new System.Drawing.Point(526, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 17);
+            this.label1.Size = new System.Drawing.Size(307, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách ca làm việc";
             // 
@@ -129,7 +140,7 @@ namespace DoAnStarbucks
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(129, 231);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 63;
@@ -138,7 +149,7 @@ namespace DoAnStarbucks
             // 
             this.dtEndtime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtEndtime.Location = new System.Drawing.Point(129, 155);
-            this.dtEndtime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtEndtime.Margin = new System.Windows.Forms.Padding(2);
             this.dtEndtime.Name = "dtEndtime";
             this.dtEndtime.Size = new System.Drawing.Size(151, 20);
             this.dtEndtime.TabIndex = 64;
@@ -147,7 +158,7 @@ namespace DoAnStarbucks
             // 
             this.dtStarttime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtStarttime.Location = new System.Drawing.Point(129, 89);
-            this.dtStarttime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtStarttime.Margin = new System.Windows.Forms.Padding(2);
             this.dtStarttime.Name = "dtStarttime";
             this.dtStarttime.Size = new System.Drawing.Size(151, 20);
             this.dtStarttime.TabIndex = 65;
@@ -160,7 +171,7 @@ namespace DoAnStarbucks
             this.label2.Location = new System.Drawing.Point(93, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.Size = new System.Drawing.Size(166, 31);
             this.label2.TabIndex = 66;
             this.label2.Text = "Ca làm việc";
             // 
@@ -194,11 +205,92 @@ namespace DoAnStarbucks
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15});
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(425, 369);
+            this.listView2.Margin = new System.Windows.Forms.Padding(2);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(576, 373);
+            this.listView2.TabIndex = 70;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "ID";
+            this.columnHeader8.Width = 55;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Tên";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Địa chỉ";
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Số điện thoại";
+            this.columnHeader11.Width = 83;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Email";
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Lương";
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Chi nhánh";
+            this.columnHeader14.Width = 71;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Chức vụ";
+            this.columnHeader15.Width = 73;
+            // 
+            // btnGanCa
+            // 
+            this.btnGanCa.Location = new System.Drawing.Point(933, 768);
+            this.btnGanCa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGanCa.Name = "btnGanCa";
+            this.btnGanCa.Size = new System.Drawing.Size(68, 21);
+            this.btnGanCa.TabIndex = 71;
+            this.btnGanCa.Text = "Gán ca";
+            this.btnGanCa.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label3.Location = new System.Drawing.Point(526, 315);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(287, 31);
+            this.label3.TabIndex = 72;
+            this.label3.Text = "Danh sách nhân viên";
+            // 
             // Shift
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 544);
+            this.ClientSize = new System.Drawing.Size(1088, 829);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnGanCa);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
@@ -211,7 +303,7 @@ namespace DoAnStarbucks
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Shift";
             this.Text = "Shift";
             this.ResumeLayout(false);
@@ -237,5 +329,16 @@ namespace DoAnStarbucks
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.Button btnGanCa;
+        private System.Windows.Forms.Label label3;
     }
 }

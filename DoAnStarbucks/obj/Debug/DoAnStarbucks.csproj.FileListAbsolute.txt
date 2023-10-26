@@ -22,3 +22,4 @@ D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Open
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Order.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.PaymentMethodForm.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Shift.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.SaleReport.resources

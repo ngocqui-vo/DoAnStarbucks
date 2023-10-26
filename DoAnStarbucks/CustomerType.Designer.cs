@@ -48,7 +48,7 @@
             this.label4.Location = new System.Drawing.Point(460, 29);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 17);
+            this.label4.Size = new System.Drawing.Size(365, 31);
             this.label4.TabIndex = 83;
             this.label4.Text = "Danh sách loại khách hàng";
             // 
@@ -60,7 +60,7 @@
             this.label3.Location = new System.Drawing.Point(113, 29);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 17);
+            this.label3.Size = new System.Drawing.Size(227, 31);
             this.label3.TabIndex = 82;
             this.label3.Text = "Loại khách hàng";
             // 
@@ -108,7 +108,7 @@
             this.columnHeader1,
             this.columnHeader2});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(402, 88);
+            this.listView1.Location = new System.Drawing.Point(466, 85);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(378, 244);
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(996, 533);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtLoaiKhach);

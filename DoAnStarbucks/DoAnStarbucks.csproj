@@ -82,6 +82,12 @@
     <Compile Include="PaymentMethodForm.Designer.cs">
       <DependentUpon>PaymentMethodForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleReport.Designer.cs">
+      <DependentUpon>SaleReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Shift.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentMethodForm.resx">
       <DependentUpon>PaymentMethodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleReport.resx">
+      <DependentUpon>SaleReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shift.resx">
       <DependentUpon>Shift.cs</DependentUpon>
