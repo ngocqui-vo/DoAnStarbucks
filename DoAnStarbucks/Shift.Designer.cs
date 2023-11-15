@@ -102,7 +102,7 @@ namespace DoAnStarbucks
             this.label1.Location = new System.Drawing.Point(526, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 31);
+            this.label1.Size = new System.Drawing.Size(171, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách ca làm việc";
             // 
@@ -171,7 +171,7 @@ namespace DoAnStarbucks
             this.label2.Location = new System.Drawing.Point(93, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 31);
+            this.label2.Size = new System.Drawing.Size(91, 17);
             this.label2.TabIndex = 66;
             this.label2.Text = "Ca làm việc";
             // 
@@ -279,7 +279,7 @@ namespace DoAnStarbucks
             this.label3.Location = new System.Drawing.Point(526, 315);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(287, 31);
+            this.label3.Size = new System.Drawing.Size(161, 17);
             this.label3.TabIndex = 72;
             this.label3.Text = "Danh sách nhân viên";
             // 
@@ -305,7 +305,7 @@ namespace DoAnStarbucks
             this.Controls.Add(this.listView1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Shift";
-            this.Text = "Shift";
+            this.Text = "Ca Làm Việc";
             this.ResumeLayout(false);
             this.PerformLayout();
 

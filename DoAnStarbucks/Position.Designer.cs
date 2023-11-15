@@ -39,12 +39,14 @@ namespace DoAnStarbucks
             this.txtNamePosition = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 85);
+            this.label2.Location = new System.Drawing.Point(9, 149);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
@@ -108,7 +110,7 @@ namespace DoAnStarbucks
             // 
             // txtNamePosition
             // 
-            this.txtNamePosition.Location = new System.Drawing.Point(103, 81);
+            this.txtNamePosition.Location = new System.Drawing.Point(101, 145);
             this.txtNamePosition.Margin = new System.Windows.Forms.Padding(2);
             this.txtNamePosition.Name = "txtNamePosition";
             this.txtNamePosition.Size = new System.Drawing.Size(133, 20);
@@ -138,11 +140,31 @@ namespace DoAnStarbucks
             this.label4.TabIndex = 67;
             this.label4.Text = "Danh sách chức vụ";
             // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(11, 108);
+            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(18, 13);
+            this.labelID.TabIndex = 92;
+            this.labelID.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(101, 105);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(128, 20);
+            this.txtID.TabIndex = 91;
+            // 
             // Position
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.labelID);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNamePosition);
@@ -153,7 +175,7 @@ namespace DoAnStarbucks
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Position";
-            this.Text = "Position";
+            this.Text = "Vị Trí";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +192,7 @@ namespace DoAnStarbucks
         private System.Windows.Forms.TextBox txtNamePosition;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

@@ -658,7 +658,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SanPham";
-            this.Text = "SanPham";
+            this.Text = "Sản Phẩm";
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabThucUong.ResumeLayout(false);
             this.tabThucUong.PerformLayout();

@@ -57,6 +57,8 @@ namespace DoAnStarbucks
             this.btnThem = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.labelID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label4
@@ -91,7 +93,7 @@ namespace DoAnStarbucks
             "Shift 2",
             "Shift 3"});
             this.comboBox2.Location = new System.Drawing.Point(688, 17);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(162, 21);
             this.comboBox2.TabIndex = 9;
@@ -109,7 +111,7 @@ namespace DoAnStarbucks
             this.columnHeader15});
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(305, 120);
-            this.listView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView2.Margin = new System.Windows.Forms.Padding(2);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(576, 373);
             this.listView2.TabIndex = 8;
@@ -166,32 +168,32 @@ namespace DoAnStarbucks
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(134, 168);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress.Location = new System.Drawing.Point(133, 210);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(128, 20);
             this.txtAddress.TabIndex = 34;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(134, 218);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Location = new System.Drawing.Point(133, 247);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(128, 20);
             this.txtEmail.TabIndex = 33;
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(134, 267);
-            this.txtSalary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSalary.Location = new System.Drawing.Point(133, 285);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(2);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(128, 20);
             this.txtSalary.TabIndex = 31;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(134, 120);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Location = new System.Drawing.Point(133, 173);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(128, 20);
             this.txtName.TabIndex = 30;
@@ -199,7 +201,7 @@ namespace DoAnStarbucks
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(21, 320);
+            this.label8.Location = new System.Drawing.Point(20, 338);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(97, 13);
@@ -209,7 +211,7 @@ namespace DoAnStarbucks
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 271);
+            this.label7.Location = new System.Drawing.Point(20, 289);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
@@ -219,7 +221,7 @@ namespace DoAnStarbucks
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 221);
+            this.label6.Location = new System.Drawing.Point(20, 250);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
@@ -229,7 +231,7 @@ namespace DoAnStarbucks
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 168);
+            this.label5.Location = new System.Drawing.Point(20, 210);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
@@ -239,7 +241,7 @@ namespace DoAnStarbucks
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 120);
+            this.label1.Location = new System.Drawing.Point(20, 173);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
@@ -249,7 +251,7 @@ namespace DoAnStarbucks
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(21, 372);
+            this.label10.Location = new System.Drawing.Point(20, 390);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 13);
@@ -289,7 +291,7 @@ namespace DoAnStarbucks
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(134, 312);
+            this.comboBox1.Location = new System.Drawing.Point(133, 330);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(128, 21);
             this.comboBox1.TabIndex = 67;
@@ -297,16 +299,36 @@ namespace DoAnStarbucks
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(134, 364);
+            this.comboBox3.Location = new System.Drawing.Point(133, 382);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(128, 21);
             this.comboBox3.TabIndex = 68;
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(24, 141);
+            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(18, 13);
+            this.labelID.TabIndex = 92;
+            this.labelID.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(133, 138);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(128, 20);
+            this.txtID.TabIndex = 91;
             // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 589);
+            this.Controls.Add(this.labelID);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnXoa);
@@ -327,9 +349,9 @@ namespace DoAnStarbucks
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.listView2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Employee";
-            this.Text = "Employee";
+            this.Text = "Nhân Viên";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,5 +387,7 @@ namespace DoAnStarbucks
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

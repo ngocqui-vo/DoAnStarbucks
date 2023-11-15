@@ -44,12 +44,15 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.lbLoaiSp = new System.Windows.Forms.Label();
             this.cbLoaiSp = new System.Windows.Forms.ComboBox();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lbKhuyenMai
@@ -147,6 +150,7 @@
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -157,7 +161,7 @@
             this.listView1.Location = new System.Drawing.Point(313, 54);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(588, 300);
+            this.listView1.Size = new System.Drawing.Size(635, 300);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -175,17 +179,22 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Ngày bắt đầu";
-            this.columnHeader3.Width = 83;
+            this.columnHeader3.Width = 68;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Ngày Kết thúc";
-            this.columnHeader4.Width = 109;
+            this.columnHeader4.Width = 100;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Loại sản phẩm";
-            this.columnHeader5.Width = 93;
+            this.columnHeader5.Width = 87;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Miêu tả";
+            this.columnHeader6.Width = 94;
             // 
             // btnXoa
             // 
@@ -234,16 +243,35 @@
             this.cbLoaiSp.Size = new System.Drawing.Size(151, 21);
             this.cbLoaiSp.TabIndex = 68;
             // 
-            // columnHeader6
+            // labelID
             // 
-            this.columnHeader6.Text = "Miêu tả";
-            this.columnHeader6.Width = 94;
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(47, 57);
+            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(18, 13);
+            this.labelID.TabIndex = 92;
+            this.labelID.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(138, 54);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(146, 20);
+            this.txtID.TabIndex = 91;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "ID";
             // 
             // Promotion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 454);
+            this.Controls.Add(this.labelID);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.cbLoaiSp);
             this.Controls.Add(this.lbLoaiSp);
             this.Controls.Add(this.btnXoa);
@@ -262,7 +290,7 @@
             this.Controls.Add(this.lbKhuyenMai);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Promotion";
-            this.Text = "Promotion";
+            this.Text = "Khuyến Mãi";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +319,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label lbLoaiSp;
         private System.Windows.Forms.ComboBox cbLoaiSp;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

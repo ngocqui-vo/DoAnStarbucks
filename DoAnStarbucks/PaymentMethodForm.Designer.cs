@@ -38,6 +38,8 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label4
@@ -66,7 +68,7 @@
             // 
             // txtTenPTThanhToan
             // 
-            this.txtTenPTThanhToan.Location = new System.Drawing.Point(28, 126);
+            this.txtTenPTThanhToan.Location = new System.Drawing.Point(26, 198);
             this.txtTenPTThanhToan.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenPTThanhToan.Name = "txtTenPTThanhToan";
             this.txtTenPTThanhToan.Size = new System.Drawing.Size(133, 20);
@@ -129,18 +131,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 102);
+            this.label2.Location = new System.Drawing.Point(25, 174);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 13);
             this.label2.TabIndex = 68;
             this.label2.Text = "Tên phương thức thanh toán";
             // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(25, 114);
+            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(18, 13);
+            this.labelID.TabIndex = 92;
+            this.labelID.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(28, 139);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(128, 20);
+            this.txtID.TabIndex = 91;
+            // 
             // PaymentMethodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelID);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTenPTThanhToan);
@@ -150,7 +172,7 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
             this.Name = "PaymentMethodForm";
-            this.Text = "PaymentMethodForm";
+            this.Text = "Phương Thức Thanh Toán";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +190,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

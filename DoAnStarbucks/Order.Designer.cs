@@ -639,7 +639,7 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.tabSanPham);
             this.Name = "Order";
-            this.Text = "Order";
+            this.Text = "Đặt Món";
             this.tabSanPham.ResumeLayout(false);
             this.tabThucAn.ResumeLayout(false);
             this.tabThucAn.PerformLayout();

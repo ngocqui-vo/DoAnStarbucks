@@ -38,6 +38,8 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label4
@@ -48,7 +50,7 @@
             this.label4.Location = new System.Drawing.Point(460, 29);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(365, 31);
+            this.label4.Size = new System.Drawing.Size(205, 17);
             this.label4.TabIndex = 83;
             this.label4.Text = "Danh sách loại khách hàng";
             // 
@@ -60,13 +62,13 @@
             this.label3.Location = new System.Drawing.Point(113, 29);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 31);
+            this.label3.Size = new System.Drawing.Size(128, 17);
             this.label3.TabIndex = 82;
             this.label3.Text = "Loại khách hàng";
             // 
             // txtLoaiKhach
             // 
-            this.txtLoaiKhach.Location = new System.Drawing.Point(19, 123);
+            this.txtLoaiKhach.Location = new System.Drawing.Point(17, 184);
             this.txtLoaiKhach.Margin = new System.Windows.Forms.Padding(2);
             this.txtLoaiKhach.Name = "txtLoaiKhach";
             this.txtLoaiKhach.Size = new System.Drawing.Size(133, 20);
@@ -129,18 +131,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 99);
+            this.label2.Location = new System.Drawing.Point(16, 160);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 76;
             this.label2.Text = "Loại khách hàng";
             // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(16, 98);
+            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(18, 13);
+            this.labelID.TabIndex = 85;
+            this.labelID.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(17, 123);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(128, 20);
+            this.txtID.TabIndex = 84;
+            // 
             // CustomerType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(996, 533);
+            this.Controls.Add(this.labelID);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtLoaiKhach);
@@ -150,7 +172,7 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
             this.Name = "CustomerType";
-            this.Text = "CustomerType";
+            this.Text = "Loại Khách Hàng";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +190,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

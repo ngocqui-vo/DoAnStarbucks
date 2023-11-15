@@ -191,11 +191,12 @@
             this.ClientSize = new System.Drawing.Size(852, 496);
             this.Controls.Add(this.lbGioiThieu);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.RightToLeftLayout = true;
-            this.Text = "MainForm";
+            this.Text = "Trang Chủ";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

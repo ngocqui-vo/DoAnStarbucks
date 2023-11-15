@@ -198,7 +198,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SaleReport";
-            this.Text = "SaleReport";
+            this.Text = "Thống Kê Doanh Số";
             this.ResumeLayout(false);
             this.PerformLayout();
 
