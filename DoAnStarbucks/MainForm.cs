@@ -19,35 +19,35 @@ namespace DoAnStarbucks
 
         private void toolStripMenuItemChiNhanh_Click(object sender, EventArgs e)
         {
-            BranchesManager branchesManager = new BranchesManager();
+            BranchesForm branchesManager = new BranchesForm();
             branchesManager.MdiParent = this;
             branchesManager.Show();
         }
 
         private void toolStripMenuItemGioLamViec_Click(object sender, EventArgs e)
         {
-            OpeningHours openingHours = new OpeningHours();
+            OpeningHoursForm openingHours = new OpeningHoursForm();
             openingHours.MdiParent = this;
             openingHours.Show();
         }
 
         private void toolStripMenuItemNhanVien_Click(object sender, EventArgs e)
         {
-            Employee employee = new Employee();
+            EmployeeForm employee = new EmployeeForm();
             employee.MdiParent = this;
             employee.Show();
         }
 
         private void toolStripMenuItemChucVu_Click(object sender, EventArgs e)
         {
-            Position position = new Position();
+            PositionForm position = new PositionForm();
             position.MdiParent = this;
             position.Show();
         }
 
         private void toolStripMenuItemCaLamViec_Click(object sender, EventArgs e)
         {
-            Shift shift = new Shift();
+            ShiftForm shift = new ShiftForm();
             shift.MdiParent = this;
             shift.Show();
         }
@@ -61,42 +61,42 @@ namespace DoAnStarbucks
 
         private void toolStripMenuItemDatHang_Click(object sender, EventArgs e)
         {
-            Order order = new Order();
+            OrderForm order = new OrderForm();
             order.MdiParent = this;
             order.Show();
         }
 
         private void toolStripMenuItemLoaiKhachHang_Click(object sender, EventArgs e)
         {
-            CustomerType customerType = new CustomerType(); 
+            CustomerTypeForm customerType = new CustomerTypeForm(); 
             customerType.MdiParent = this;
             customerType.Show();
         }
 
         private void toolStripMenuItemKhachHang_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer();
+            CustomerForm customer = new CustomerForm();
             customer.MdiParent = this;
             customer.Show();
         }
 
         private void toolStripMenuItemLoaiSanPham_Click(object sender, EventArgs e)
         {
-            ProductType productType = new ProductType();    
+            ProductTypeForm productType = new ProductTypeForm();    
             productType.MdiParent = this;
             productType.Show();
         }
 
         private void toolStripMenuItemSanPham_Click(object sender, EventArgs e)
         {
-            SanPham sanPham = new SanPham();
+            ProductForm sanPham = new ProductForm();
             sanPham.MdiParent = this;
             sanPham.Show();
         }
 
         private void toolStripMenuItemKMLoaiSP_Click(object sender, EventArgs e)
         {
-            Promotion promotion = new Promotion();
+            PromotionForm promotion = new PromotionForm();
             promotion.MdiParent = this;
             promotion.Show();
         }

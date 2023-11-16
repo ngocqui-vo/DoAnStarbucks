@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DoAnStarbucks
 {
-    public partial class ProductType : Form
+    public partial class SaleReportForm : Form
     {
-        public ProductType()
+        public SaleReportForm()
         {
             InitializeComponent();
-        }
-
-        private void lbTen_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

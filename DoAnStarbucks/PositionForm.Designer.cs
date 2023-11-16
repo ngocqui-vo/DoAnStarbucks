@@ -1,7 +1,7 @@
 ﻿
 namespace DoAnStarbucks
 {
-    partial class Position
+    partial class PositionForm
     {
         /// <summary>
         /// Required designer variable.

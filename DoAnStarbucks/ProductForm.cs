@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DoAnStarbucks
 {
-    public partial class Shift : Form
+    public partial class ProductForm : Form
     {
-        public Shift()
+        public ProductForm()
         {
             InitializeComponent();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

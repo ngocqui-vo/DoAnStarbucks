@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DoAnStarbucks
 {
-    public partial class SanPham : Form
+    public partial class PromotionForm : Form
     {
-        public SanPham()
+        public PromotionForm()
         {
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

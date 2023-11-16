@@ -1,6 +1,6 @@
 ﻿namespace DoAnStarbucks
 {
-    partial class SaleReport
+    partial class SaleReportForm
     {
         /// <summary>
         /// Required designer variable.

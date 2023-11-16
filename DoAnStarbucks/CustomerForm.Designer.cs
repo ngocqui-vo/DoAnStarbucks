@@ -1,6 +1,6 @@
 ﻿namespace DoAnStarbucks
 {
-    partial class Customer
+    partial class CustomerForm
     {
         /// <summary>
         /// Required designer variable.

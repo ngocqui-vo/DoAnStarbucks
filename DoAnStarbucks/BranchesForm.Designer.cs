@@ -1,7 +1,7 @@
 ﻿
 namespace DoAnStarbucks
 {
-    partial class BranchesManager
+    partial class BranchesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -57,8 +57,6 @@ namespace DoAnStarbucks
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelID = new System.Windows.Forms.Label();
-            this.dgvChiNhanh = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChiNhanh)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -312,20 +310,11 @@ namespace DoAnStarbucks
             this.labelID.TabIndex = 72;
             this.labelID.Text = "ID";
             // 
-            // dgvChiNhanh
-            // 
-            this.dgvChiNhanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChiNhanh.Location = new System.Drawing.Point(346, 242);
-            this.dgvChiNhanh.Name = "dgvChiNhanh";
-            this.dgvChiNhanh.Size = new System.Drawing.Size(657, 265);
-            this.dgvChiNhanh.TabIndex = 73;
-            // 
             // BranchesManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1014, 534);
-            this.Controls.Add(this.dgvChiNhanh);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label2);
@@ -350,7 +339,6 @@ namespace DoAnStarbucks
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BranchesManager";
             this.Text = "Chi Nhánh";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChiNhanh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,6 +374,5 @@ namespace DoAnStarbucks
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelID;
-        private System.Windows.Forms.DataGridView dgvChiNhanh;
     }
 }

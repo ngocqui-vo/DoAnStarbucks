@@ -1,7 +1,7 @@
 ﻿
 namespace DoAnStarbucks
 {
-    partial class Shift
+    partial class ShiftForm
     {
         /// <summary>
         /// Required designer variable.

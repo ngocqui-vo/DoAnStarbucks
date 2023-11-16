@@ -1,6 +1,6 @@
 ﻿namespace DoAnStarbucks
 {
-    partial class Promotion
+    partial class PromotionForm
     {
         /// <summary>
         /// Required designer variable.
