@@ -29,16 +29,6 @@ namespace DoAnStarbucks
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,88 +47,9 @@ namespace DoAnStarbucks
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelID = new System.Windows.Forms.Label();
+            this.dgvCN = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCN)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(346, 114);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(657, 92);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 70;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên chi nhánh";
-            this.columnHeader2.Width = 95;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Địa chỉ";
-            this.columnHeader3.Width = 70;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Số điện thoại";
-            this.columnHeader4.Width = 85;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Email";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Giờ mở cửa";
-            this.columnHeader6.Width = 120;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Quản lý";
-            this.columnHeader7.Width = 97;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "ALL",
-            "1 District",
-            "2 District",
-            "4 District",
-            "7 District",
-            "9 District"});
-            this.comboBox1.Location = new System.Drawing.Point(723, 19);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(592, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Branch Position:";
             // 
             // label3
             // 
@@ -208,7 +119,7 @@ namespace DoAnStarbucks
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(128, 20);
-            this.textBox2.TabIndex = 14;
+            this.textBox2.TabIndex = 2;
             // 
             // textBox5
             // 
@@ -216,7 +127,7 @@ namespace DoAnStarbucks
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(128, 20);
-            this.textBox5.TabIndex = 17;
+            this.textBox5.TabIndex = 4;
             // 
             // textBox6
             // 
@@ -224,7 +135,7 @@ namespace DoAnStarbucks
             this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(128, 20);
-            this.textBox6.TabIndex = 18;
+            this.textBox6.TabIndex = 3;
             // 
             // label9
             // 
@@ -244,7 +155,7 @@ namespace DoAnStarbucks
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(72, 24);
-            this.btnXoa.TabIndex = 66;
+            this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
@@ -254,7 +165,7 @@ namespace DoAnStarbucks
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(74, 23);
-            this.btnCapNhat.TabIndex = 65;
+            this.btnCapNhat.TabIndex = 8;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
             // 
@@ -264,7 +175,7 @@ namespace DoAnStarbucks
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(68, 21);
-            this.btnThem.TabIndex = 64;
+            this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -275,7 +186,7 @@ namespace DoAnStarbucks
             this.comboBox2.Location = new System.Drawing.Point(120, 302);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(128, 21);
-            this.comboBox2.TabIndex = 67;
+            this.comboBox2.TabIndex = 5;
             // 
             // comboBox3
             // 
@@ -283,7 +194,7 @@ namespace DoAnStarbucks
             this.comboBox3.Location = new System.Drawing.Point(120, 344);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(128, 21);
-            this.comboBox3.TabIndex = 68;
+            this.comboBox3.TabIndex = 6;
             // 
             // txtID
             // 
@@ -291,7 +202,7 @@ namespace DoAnStarbucks
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(128, 20);
-            this.txtID.TabIndex = 70;
+            this.txtID.TabIndex = 1;
             // 
             // label2
             // 
@@ -310,11 +221,21 @@ namespace DoAnStarbucks
             this.labelID.TabIndex = 72;
             this.labelID.Text = "ID";
             // 
-            // BranchesManager
+            // dgvCN
+            // 
+            this.dgvCN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCN.Location = new System.Drawing.Point(346, 126);
+            this.dgvCN.Name = "dgvCN";
+            this.dgvCN.Size = new System.Drawing.Size(744, 316);
+            this.dgvCN.TabIndex = 73;
+            this.dgvCN.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCN_CellContentClick);
+            // 
+            // BranchesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 534);
+            this.ClientSize = new System.Drawing.Size(1158, 547);
+            this.Controls.Add(this.dgvCN);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label2);
@@ -333,29 +254,17 @@ namespace DoAnStarbucks
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.listView1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "BranchesManager";
+            this.Name = "BranchesForm";
             this.Text = "Chi Nhánh";
+            this.Load += new System.EventHandler(this.BranchesForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -374,5 +283,6 @@ namespace DoAnStarbucks
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.DataGridView dgvCN;
     }
 }

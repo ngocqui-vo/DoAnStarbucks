@@ -34,7 +34,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvOH = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
@@ -83,6 +83,7 @@
             this.btnXoa.TabIndex = 72;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnCapNhat
             // 
@@ -93,6 +94,7 @@
             this.btnCapNhat.TabIndex = 71;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnThem
             // 
@@ -105,29 +107,32 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // listView1
+            // lvOH
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvOH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(392, 112);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(303, 249);
-            this.listView1.TabIndex = 69;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvOH.FullRowSelect = true;
+            this.lvOH.GridLines = true;
+            this.lvOH.HideSelection = false;
+            this.lvOH.Location = new System.Drawing.Point(392, 112);
+            this.lvOH.Margin = new System.Windows.Forms.Padding(2);
+            this.lvOH.Name = "lvOH";
+            this.lvOH.Size = new System.Drawing.Size(348, 232);
+            this.lvOH.TabIndex = 69;
+            this.lvOH.UseCompatibleStateImageBehavior = false;
+            this.lvOH.View = System.Windows.Forms.View.Details;
+            this.lvOH.SelectedIndexChanged += new System.EventHandler(this.lvOH_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 76;
+            this.columnHeader1.Width = 81;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Giờ mở cửa";
-            this.columnHeader2.Width = 204;
+            this.columnHeader2.Width = 256;
             // 
             // label2
             // 
@@ -157,7 +162,7 @@
             this.txtID.Size = new System.Drawing.Size(128, 20);
             this.txtID.TabIndex = 91;
             // 
-            // OpeningHours
+            // OpeningHoursForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,10 +175,11 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvOH);
             this.Controls.Add(this.label2);
-            this.Name = "OpeningHours";
+            this.Name = "OpeningHoursForm";
             this.Text = "Giờ mở cửa";
+            this.Load += new System.EventHandler(this.OpeningHoursForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,7 +193,7 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvOH;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label2;

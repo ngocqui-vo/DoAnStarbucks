@@ -46,36 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BranchesManager.cs">
+    <Compile Include="BranchesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BranchesManager.Designer.cs">
-      <DependentUpon>BranchesManager.cs</DependentUpon>
+    <Compile Include="BranchesForm.Designer.cs">
+      <DependentUpon>BranchesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Connect.cs" />
-    <Compile Include="Customer.cs">
+    <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerType.cs">
+    <Compile Include="CustomerTypeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerType.Designer.cs">
-      <DependentUpon>CustomerType.cs</DependentUpon>
+    <Compile Include="CustomerTypeForm.Designer.cs">
+      <DependentUpon>CustomerTypeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OpeningHours.cs">
+    <Compile Include="OpeningHoursForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OpeningHours.Designer.cs">
-      <DependentUpon>OpeningHours.cs</DependentUpon>
+    <Compile Include="OpeningHoursForm.Designer.cs">
+      <DependentUpon>OpeningHoursForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Order.cs">
+    <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Order.Designer.cs">
-      <DependentUpon>Order.cs</DependentUpon>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PaymentMethodForm.cs">
       <SubType>Form</SubType>
@@ -83,41 +83,41 @@
     <Compile Include="PaymentMethodForm.Designer.cs">
       <DependentUpon>PaymentMethodForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SaleReport.cs">
+    <Compile Include="SaleReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SaleReport.Designer.cs">
-      <DependentUpon>SaleReport.cs</DependentUpon>
+    <Compile Include="SaleReportForm.Designer.cs">
+      <DependentUpon>SaleReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shift.cs">
+    <Compile Include="ShiftForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Shift.Designer.cs">
-      <DependentUpon>Shift.cs</DependentUpon>
+    <Compile Include="ShiftForm.Designer.cs">
+      <DependentUpon>ShiftForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Promotion.cs">
+    <Compile Include="PromotionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Promotion.Designer.cs">
-      <DependentUpon>Promotion.cs</DependentUpon>
+    <Compile Include="PromotionForm.Designer.cs">
+      <DependentUpon>PromotionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductType.cs">
+    <Compile Include="ProductTypeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductType.Designer.cs">
-      <DependentUpon>ProductType.cs</DependentUpon>
+    <Compile Include="ProductTypeForm.Designer.cs">
+      <DependentUpon>ProductTypeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SanPham.cs">
+    <Compile Include="ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SanPham.Designer.cs">
-      <DependentUpon>SanPham.cs</DependentUpon>
+    <Compile Include="ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee.cs">
+    <Compile Include="EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <Compile Include="EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -131,11 +131,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Position.cs">
+    <Compile Include="PositionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Position.Designer.cs">
-      <DependentUpon>Position.cs</DependentUpon>
+    <Compile Include="PositionForm.Designer.cs">
+      <DependentUpon>PositionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,47 +145,47 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BranchesManager.resx">
-      <DependentUpon>BranchesManager.cs</DependentUpon>
+    <EmbeddedResource Include="BranchesForm.resx">
+      <DependentUpon>BranchesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerType.resx">
-      <DependentUpon>CustomerType.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerTypeForm.resx">
+      <DependentUpon>CustomerTypeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OpeningHours.resx">
-      <DependentUpon>OpeningHours.cs</DependentUpon>
+    <EmbeddedResource Include="OpeningHoursForm.resx">
+      <DependentUpon>OpeningHoursForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Order.resx">
-      <DependentUpon>Order.cs</DependentUpon>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentMethodForm.resx">
       <DependentUpon>PaymentMethodForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SaleReport.resx">
-      <DependentUpon>SaleReport.cs</DependentUpon>
+    <EmbeddedResource Include="SaleReportForm.resx">
+      <DependentUpon>SaleReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Shift.resx">
-      <DependentUpon>Shift.cs</DependentUpon>
+    <EmbeddedResource Include="ShiftForm.resx">
+      <DependentUpon>ShiftForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Promotion.resx">
-      <DependentUpon>Promotion.cs</DependentUpon>
+    <EmbeddedResource Include="PromotionForm.resx">
+      <DependentUpon>PromotionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductType.resx">
-      <DependentUpon>ProductType.cs</DependentUpon>
+    <EmbeddedResource Include="ProductTypeForm.resx">
+      <DependentUpon>ProductTypeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Position.resx">
-      <DependentUpon>Position.cs</DependentUpon>
+    <EmbeddedResource Include="PositionForm.resx">
+      <DependentUpon>PositionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -199,8 +199,8 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SanPham.resx">
-      <DependentUpon>SanPham.cs</DependentUpon>
+    <EmbeddedResource Include="ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
