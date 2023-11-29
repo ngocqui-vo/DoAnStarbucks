@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbTen = new System.Windows.Forms.Label();
             this.lbLoaiSP = new System.Windows.Forms.Label();
@@ -80,7 +77,6 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUploadImage = new System.Windows.Forms.Button();
-            this.contextMenuStrip1.SuspendLayout();
             this.tabThucUong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -101,19 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabSanPham.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBox1});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 31);
-            // 
-            // toolStripComboBox1
-            // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
             // 
             // label1
             // 
@@ -636,7 +619,7 @@
             this.btnUploadImage.Text = "Thêm ảnh";
             this.btnUploadImage.UseVisualStyleBackColor = true;
             // 
-            // SanPham
+            // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -657,9 +640,8 @@
             this.Controls.Add(this.lbTen);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "SanPham";
+            this.Name = "ProductForm";
             this.Text = "Sản Phẩm";
-            this.contextMenuStrip1.ResumeLayout(false);
             this.tabThucUong.ResumeLayout(false);
             this.tabThucUong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
@@ -687,8 +669,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbTen;
         private System.Windows.Forms.Label lbLoaiSP;

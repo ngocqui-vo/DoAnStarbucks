@@ -65,6 +65,15 @@
     <Compile Include="CustomerTypeForm.Designer.cs">
       <DependentUpon>CustomerTypeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Branch.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerType.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\OpeningHour.cs" />
+    <Compile Include="Models\PaymentMethod.cs" />
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\ProductType.cs" />
+    <Compile Include="Models\Promotion.cs" />
     <Compile Include="OpeningHoursForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +92,15 @@
     <Compile Include="PaymentMethodForm.Designer.cs">
       <DependentUpon>PaymentMethodForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repository\BranchRepo.cs" />
+    <Compile Include="Repository\CustomerRepo.cs" />
+    <Compile Include="Repository\CustomerTypeRepo.cs" />
+    <Compile Include="Repository\EmployeeRepo.cs" />
+    <Compile Include="Repository\OpeningHoursRepo.cs" />
+    <Compile Include="Repository\PaymentMethodRepo.cs" />
+    <Compile Include="Repository\PositionRepo.cs" />
+    <Compile Include="Repository\ProductTypeRepo.cs" />
+    <Compile Include="Repository\PromotionRepo.cs" />
     <Compile Include="SaleReportForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DoAnStarbucks.Models;
+using DoAnStarbucks.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,126 +16,57 @@ namespace DoAnStarbucks
 {
     public partial class OpeningHoursForm : Form
     {
+        OpeningHoursRepo openHoursRepo = new OpeningHoursRepo();
+        BindingList<OpeningHour> openingHoursBindingList;
         public OpeningHoursForm()
         {
             InitializeComponent();
         }
 
-        SqlConnection connection = Connect.GetConnection();
+        
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            try
-            {
-                SqlCommand cmd = connection.CreateCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_CreateOpeningHours";
-
-                cmd.Parameters.AddWithValue("@opening_hours_id", txtID.Text);
-                cmd.Parameters.AddWithValue("@opening_hours", txtOpeninghours.Text);
-                cmd.ExecuteNonQuery();
-
-                LoadOpeningHours();
-
-                
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Thêm thất bại! Hãy bảo đảm không trùng ID", "Lỗi",MessageBoxButtons.OK);
-            }
-            connection.Close();
+           
+            OpeningHour op = new OpeningHour();
+            op.ID = txtID.Text;
+            op.OpenHours = txtOpeninghours.Text;
+            openHoursRepo.Add(op);
+            LoadOpeningHours();          
+            
         }
 
         private void OpeningHoursForm_Load(object sender, EventArgs e)
-        {
+        {                      
             LoadOpeningHours();
         }
         private void LoadOpeningHours()
         {
-            lvOH.Items.Clear();
-            SqlConnection connection = Connect.GetConnection();
-            connection.Open();
-            SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_GetAllOpeningHours";
-
-            var reader = cmd.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    ListViewItem item = new ListViewItem(reader["opening_hours_id"].ToString());
-                    item.SubItems.Add(reader["opening_hours"].ToString());
-                    lvOH.Items.Add(item);
-                }
-            }
-            connection.Close();
-        }
-
-        private void lvOH_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            try
-            {
-                ListViewItem item = lvOH.SelectedItems[0];
-                txtID.Text = item.Text;
-                txtOpeninghours.Text = item.SubItems[1].Text;
-            }
-            catch (Exception)
-            {
-
-            }
-            
+            openingHoursBindingList = new BindingList<OpeningHour>(openHoursRepo.GetAll());
+            dgvOH.DataSource = openingHoursBindingList;
+            dgvOH.Columns["OpenHours"].HeaderText = "Giờ mở cửa";       
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                for (int i = lvOH.SelectedItems.Count-1; i >= 0; i--)
-                {
-                    SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "sp_DeleteOpeningHours";
-                    cmd.Parameters.AddWithValue("@opening_hours_id", lvOH.SelectedItems[i].Text);
-                    cmd.ExecuteNonQuery();
-
-                    LoadOpeningHours();
-                }
-                connection.Close();
-                
-            }
-            catch (Exception)
-            {
-
-            }
+            openHoursRepo.Delete(txtID.Text);
+            LoadOpeningHours();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            try
-            {
-                SqlCommand cmd = connection.CreateCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_UpdateOpeningHours";
+            var op = new OpeningHour();
+            op.ID = txtID.Text;
+            op.OpenHours = txtOpeninghours.Text;
+            openHoursRepo.Update(op);
+            LoadOpeningHours();           
+        }
 
-                cmd.Parameters.AddWithValue("@opening_hours_id", txtID.Text);
-                cmd.Parameters.AddWithValue("@opening_hours", txtOpeninghours.Text);
-                cmd.ExecuteNonQuery();
-
-                LoadOpeningHours();
-            }
-            
-            catch (Exception)
-            {
-                MessageBox.Show("Sửa thất bại", "Lỗi", MessageBoxButtons.OK);
-            }
-            connection.Close();
-
-            
+        private void dgvOH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = dgvOH.Rows[e.RowIndex];
+            txtID.Text = row.Cells["ID"].Value.ToString();
+            txtOpeninghours.Text = row.Cells["OpenHours"].Value.ToString();
         }
     }
 }

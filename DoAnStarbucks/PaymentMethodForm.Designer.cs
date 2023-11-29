@@ -34,12 +34,11 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.labelID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.dgvPM = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPM)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -68,7 +67,7 @@
             // 
             // txtTenPTThanhToan
             // 
-            this.txtTenPTThanhToan.Location = new System.Drawing.Point(26, 198);
+            this.txtTenPTThanhToan.Location = new System.Drawing.Point(83, 193);
             this.txtTenPTThanhToan.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenPTThanhToan.Name = "txtTenPTThanhToan";
             this.txtTenPTThanhToan.Size = new System.Drawing.Size(133, 20);
@@ -76,62 +75,41 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(178, 252);
+            this.btnXoa.Location = new System.Drawing.Point(233, 252);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(72, 24);
             this.btnXoa.TabIndex = 72;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(100, 253);
+            this.btnCapNhat.Location = new System.Drawing.Point(155, 253);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(74, 23);
             this.btnCapNhat.TabIndex = 71;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(28, 255);
+            this.btnThem.Location = new System.Drawing.Point(83, 255);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(68, 21);
             this.btnThem.TabIndex = 70;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(411, 91);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(378, 244);
-            this.listView1.TabIndex = 69;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 76;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên phương thức thanh toán";
-            this.columnHeader2.Width = 255;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 174);
+            this.label2.Location = new System.Drawing.Point(82, 169);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 13);
@@ -141,7 +119,7 @@
             // labelID
             // 
             this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(25, 114);
+            this.labelID.Location = new System.Drawing.Point(82, 109);
             this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(18, 13);
@@ -150,17 +128,27 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(28, 139);
+            this.txtID.Location = new System.Drawing.Point(85, 134);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(128, 20);
             this.txtID.TabIndex = 91;
+            // 
+            // dgvPM
+            // 
+            this.dgvPM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPM.Location = new System.Drawing.Point(375, 114);
+            this.dgvPM.Name = "dgvPM";
+            this.dgvPM.Size = new System.Drawing.Size(389, 251);
+            this.dgvPM.TabIndex = 93;
+            this.dgvPM.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPM_CellContentClick);
             // 
             // PaymentMethodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvPM);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label4);
@@ -169,10 +157,11 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
             this.Name = "PaymentMethodForm";
             this.Text = "Phương Thức Thanh Toán";
+            this.Load += new System.EventHandler(this.PaymentMethodForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,11 +175,9 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.DataGridView dgvPM;
     }
 }

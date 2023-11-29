@@ -197,7 +197,6 @@
             this.Name = "MainForm";
             this.RightToLeftLayout = true;
             this.Text = "Trang Chủ";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

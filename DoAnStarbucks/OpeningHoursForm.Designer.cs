@@ -34,12 +34,11 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.lvOH = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.labelID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.dgvOH = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOH)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -107,33 +106,6 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // lvOH
-            // 
-            this.lvOH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.lvOH.FullRowSelect = true;
-            this.lvOH.GridLines = true;
-            this.lvOH.HideSelection = false;
-            this.lvOH.Location = new System.Drawing.Point(392, 112);
-            this.lvOH.Margin = new System.Windows.Forms.Padding(2);
-            this.lvOH.Name = "lvOH";
-            this.lvOH.Size = new System.Drawing.Size(348, 232);
-            this.lvOH.TabIndex = 69;
-            this.lvOH.UseCompatibleStateImageBehavior = false;
-            this.lvOH.View = System.Windows.Forms.View.Details;
-            this.lvOH.SelectedIndexChanged += new System.EventHandler(this.lvOH_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 81;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Giờ mở cửa";
-            this.columnHeader2.Width = 256;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -156,17 +128,27 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(176, 137);
+            this.txtID.Location = new System.Drawing.Point(171, 137);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(128, 20);
+            this.txtID.Size = new System.Drawing.Size(133, 20);
             this.txtID.TabIndex = 91;
+            // 
+            // dgvOH
+            // 
+            this.dgvOH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOH.Location = new System.Drawing.Point(363, 137);
+            this.dgvOH.Name = "dgvOH";
+            this.dgvOH.Size = new System.Drawing.Size(380, 206);
+            this.dgvOH.TabIndex = 93;
+            this.dgvOH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOH_CellContentClick);
             // 
             // OpeningHoursForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvOH);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label4);
@@ -175,11 +157,11 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.lvOH);
             this.Controls.Add(this.label2);
             this.Name = "OpeningHoursForm";
             this.Text = "Giờ mở cửa";
             this.Load += new System.EventHandler(this.OpeningHoursForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,11 +175,9 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.ListView lvOH;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.DataGridView dgvOH;
     }
 }

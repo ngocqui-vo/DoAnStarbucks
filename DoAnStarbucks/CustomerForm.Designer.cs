@@ -28,91 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSdt = new System.Windows.Forms.TextBox();
-            this.txtTen = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.dgvKH = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbLKH = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.SuspendLayout();
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(142, 382);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(128, 21);
-            this.comboBox3.TabIndex = 88;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(142, 330);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 21);
-            this.comboBox1.TabIndex = 87;
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(183, 425);
+            this.btnXoa.Location = new System.Drawing.Point(186, 376);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(72, 24);
             this.btnXoa.TabIndex = 86;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(105, 426);
+            this.btnCapNhat.Location = new System.Drawing.Point(108, 377);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(74, 23);
             this.btnCapNhat.TabIndex = 85;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(33, 428);
+            this.btnThem.Location = new System.Drawing.Point(36, 379);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(68, 21);
             this.btnThem.TabIndex = 84;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 390);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 13);
-            this.label10.TabIndex = 83;
-            this.label10.Text = "Chức vụ";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label9
             // 
@@ -126,13 +94,13 @@
             this.label9.TabIndex = 82;
             this.label9.Text = "Thông tin khách hàng";
             // 
-            // txtDiaChi
+            // txtAddress
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(142, 186);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(128, 20);
-            this.txtDiaChi.TabIndex = 81;
+            this.txtAddress.Location = new System.Drawing.Point(142, 186);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(128, 20);
+            this.txtAddress.TabIndex = 81;
             // 
             // txtEmail
             // 
@@ -150,23 +118,13 @@
             this.txtSdt.Size = new System.Drawing.Size(128, 20);
             this.txtSdt.TabIndex = 79;
             // 
-            // txtTen
+            // txtName
             // 
-            this.txtTen.Location = new System.Drawing.Point(142, 138);
-            this.txtTen.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(128, 20);
-            this.txtTen.TabIndex = 78;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 338);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 13);
-            this.label8.TabIndex = 77;
-            this.label8.Text = "Chi nhánh làm việc";
+            this.txtName.Location = new System.Drawing.Point(142, 138);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(128, 20);
+            this.txtName.TabIndex = 78;
             // 
             // label7
             // 
@@ -220,62 +178,6 @@
             this.label4.TabIndex = 72;
             this.label4.Text = "Danh sách khác hàng";
             // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(314, 103);
-            this.listView2.Margin = new System.Windows.Forms.Padding(2);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(576, 373);
-            this.listView2.TabIndex = 69;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "ID";
-            this.columnHeader8.Width = 55;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Tên";
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Địa chỉ";
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Số điện thoại";
-            this.columnHeader11.Width = 83;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Email";
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Lương";
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Chi nhánh";
-            this.columnHeader14.Width = 71;
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Chức vụ";
-            this.columnHeader15.Width = 73;
-            // 
             // labelID
             // 
             this.labelID.AutoSize = true;
@@ -294,67 +196,83 @@
             this.txtID.Size = new System.Drawing.Size(128, 20);
             this.txtID.TabIndex = 89;
             // 
-            // Customer
+            // dgvKH
+            // 
+            this.dgvKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKH.Location = new System.Drawing.Point(294, 103);
+            this.dgvKH.Name = "dgvKH";
+            this.dgvKH.Size = new System.Drawing.Size(637, 390);
+            this.dgvKH.TabIndex = 91;
+            this.dgvKH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKH_CellContentClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 330);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 92;
+            this.label2.Text = "Loại khách hàng";
+            // 
+            // cbLKH
+            // 
+            this.cbLKH.FormattingEnabled = true;
+            this.cbLKH.Location = new System.Drawing.Point(142, 327);
+            this.cbLKH.Name = "cbLKH";
+            this.cbLKH.Size = new System.Drawing.Size(128, 21);
+            this.cbLKH.TabIndex = 93;
+            // 
+            // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 535);
+            this.Controls.Add(this.cbLKH);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgvKH);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtDiaChi);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtSdt);
-            this.Controls.Add(this.txtTen);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.listView2);
-            this.Name = "Customer";
+            this.Name = "CustomerForm";
             this.Text = "Khách Hàng";
+            this.Load += new System.EventHandler(this.CustomerForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSdt;
-        private System.Windows.Forms.TextBox txtTen;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.ColumnHeader columnHeader14;
-        private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.DataGridView dgvKH;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbLKH;
     }
 }
