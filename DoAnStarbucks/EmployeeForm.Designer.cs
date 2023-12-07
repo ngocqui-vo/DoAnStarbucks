@@ -84,7 +84,7 @@ namespace DoAnStarbucks
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(128, 20);
-            this.txtAddress.TabIndex = 34;
+            this.txtAddress.TabIndex = 3;
             // 
             // txtEmail
             // 
@@ -92,7 +92,7 @@ namespace DoAnStarbucks
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(128, 20);
-            this.txtEmail.TabIndex = 33;
+            this.txtEmail.TabIndex = 4;
             // 
             // txtSalary
             // 
@@ -100,7 +100,7 @@ namespace DoAnStarbucks
             this.txtSalary.Margin = new System.Windows.Forms.Padding(2);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(128, 20);
-            this.txtSalary.TabIndex = 31;
+            this.txtSalary.TabIndex = 6;
             // 
             // txtName
             // 
@@ -108,7 +108,7 @@ namespace DoAnStarbucks
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(128, 20);
-            this.txtName.TabIndex = 30;
+            this.txtName.TabIndex = 2;
             // 
             // label8
             // 
@@ -209,7 +209,7 @@ namespace DoAnStarbucks
             this.cbBranches.Location = new System.Drawing.Point(133, 363);
             this.cbBranches.Name = "cbBranches";
             this.cbBranches.Size = new System.Drawing.Size(128, 21);
-            this.cbBranches.TabIndex = 67;
+            this.cbBranches.TabIndex = 7;
             // 
             // cbPositions
             // 
@@ -217,7 +217,7 @@ namespace DoAnStarbucks
             this.cbPositions.Location = new System.Drawing.Point(133, 415);
             this.cbPositions.Name = "cbPositions";
             this.cbPositions.Size = new System.Drawing.Size(128, 21);
-            this.cbPositions.TabIndex = 68;
+            this.cbPositions.TabIndex = 8;
             // 
             // labelID
             // 
@@ -235,7 +235,7 @@ namespace DoAnStarbucks
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(128, 20);
-            this.txtID.TabIndex = 91;
+            this.txtID.TabIndex = 1;
             // 
             // dgvNV
             // 
@@ -252,7 +252,7 @@ namespace DoAnStarbucks
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(128, 20);
-            this.txtPhone.TabIndex = 95;
+            this.txtPhone.TabIndex = 5;
             // 
             // label2
             // 

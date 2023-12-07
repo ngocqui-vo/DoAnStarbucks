@@ -107,12 +107,6 @@
     <Compile Include="SaleReportForm.Designer.cs">
       <DependentUpon>SaleReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShiftForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ShiftForm.Designer.cs">
-      <DependentUpon>ShiftForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="PromotionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SaleReportForm.resx">
       <DependentUpon>SaleReportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ShiftForm.resx">
-      <DependentUpon>ShiftForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

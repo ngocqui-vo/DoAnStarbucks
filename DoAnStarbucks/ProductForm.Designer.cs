@@ -71,12 +71,16 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabSanPham = new System.Windows.Forms.TabControl();
+            this.tabSP = new System.Windows.Forms.TabControl();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUploadImage = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.picProductImage = new System.Windows.Forms.PictureBox();
             this.tabThucUong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -95,7 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabSanPham.SuspendLayout();
+            this.tabSP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProductImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,7 +118,7 @@
             // 
             this.lbTen.AutoSize = true;
             this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTen.Location = new System.Drawing.Point(50, 110);
+            this.lbTen.Location = new System.Drawing.Point(52, 134);
             this.lbTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTen.Name = "lbTen";
             this.lbTen.Size = new System.Drawing.Size(44, 24);
@@ -124,7 +129,7 @@
             // 
             this.lbLoaiSP.AutoSize = true;
             this.lbLoaiSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoaiSP.Location = new System.Drawing.Point(50, 146);
+            this.lbLoaiSP.Location = new System.Drawing.Point(52, 170);
             this.lbLoaiSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbLoaiSP.Name = "lbLoaiSP";
             this.lbLoaiSP.Size = new System.Drawing.Size(133, 24);
@@ -135,7 +140,7 @@
             // 
             this.lbGia.AutoSize = true;
             this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGia.Location = new System.Drawing.Point(50, 185);
+            this.lbGia.Location = new System.Drawing.Point(52, 209);
             this.lbGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(38, 24);
@@ -146,7 +151,7 @@
             // 
             this.lbMieuta.AutoSize = true;
             this.lbMieuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMieuta.Location = new System.Drawing.Point(50, 221);
+            this.lbMieuta.Location = new System.Drawing.Point(52, 245);
             this.lbMieuta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbMieuta.Name = "lbMieuta";
             this.lbMieuta.Size = new System.Drawing.Size(71, 24);
@@ -155,7 +160,7 @@
             // 
             // tbTen
             // 
-            this.tbTen.Location = new System.Drawing.Point(208, 110);
+            this.tbTen.Location = new System.Drawing.Point(210, 134);
             this.tbTen.Margin = new System.Windows.Forms.Padding(2);
             this.tbTen.Name = "tbTen";
             this.tbTen.Size = new System.Drawing.Size(153, 20);
@@ -163,7 +168,7 @@
             // 
             // tbGia
             // 
-            this.tbGia.Location = new System.Drawing.Point(208, 191);
+            this.tbGia.Location = new System.Drawing.Point(210, 215);
             this.tbGia.Margin = new System.Windows.Forms.Padding(2);
             this.tbGia.Name = "tbGia";
             this.tbGia.Size = new System.Drawing.Size(153, 20);
@@ -171,7 +176,7 @@
             // 
             // tbMieuta
             // 
-            this.tbMieuta.Location = new System.Drawing.Point(208, 227);
+            this.tbMieuta.Location = new System.Drawing.Point(210, 251);
             this.tbMieuta.Margin = new System.Windows.Forms.Padding(2);
             this.tbMieuta.Name = "tbMieuta";
             this.tbMieuta.Size = new System.Drawing.Size(153, 20);
@@ -184,12 +189,11 @@
             "thức ăn ",
             "thức uống ",
             "cà phê nguyên hạt"});
-            this.cbLoaiSP.Location = new System.Drawing.Point(208, 146);
+            this.cbLoaiSP.Location = new System.Drawing.Point(210, 170);
             this.cbLoaiSP.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiSP.Name = "cbLoaiSP";
             this.cbLoaiSP.Size = new System.Drawing.Size(153, 21);
             this.cbLoaiSP.TabIndex = 7;
-            this.cbLoaiSP.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tabThucUong
             // 
@@ -558,20 +562,21 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // tabSanPham
+            // tabSP
             // 
-            this.tabSanPham.Controls.Add(this.tabThucAn);
-            this.tabSanPham.Controls.Add(this.tabThucUong);
-            this.tabSanPham.Location = new System.Drawing.Point(440, 26);
-            this.tabSanPham.Margin = new System.Windows.Forms.Padding(2);
-            this.tabSanPham.Name = "tabSanPham";
-            this.tabSanPham.SelectedIndex = 0;
-            this.tabSanPham.Size = new System.Drawing.Size(525, 363);
-            this.tabSanPham.TabIndex = 8;
+            this.tabSP.Controls.Add(this.tabThucAn);
+            this.tabSP.Controls.Add(this.tabThucUong);
+            this.tabSP.Controls.Add(this.tabPage1);
+            this.tabSP.Location = new System.Drawing.Point(440, 26);
+            this.tabSP.Margin = new System.Windows.Forms.Padding(2);
+            this.tabSP.Name = "tabSP";
+            this.tabSP.SelectedIndex = 0;
+            this.tabSP.Size = new System.Drawing.Size(525, 363);
+            this.tabSP.TabIndex = 8;
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(204, 307);
+            this.btnXoa.Location = new System.Drawing.Point(210, 426);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(72, 24);
@@ -581,7 +586,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(126, 308);
+            this.btnCapNhat.Location = new System.Drawing.Point(132, 427);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(74, 23);
@@ -591,7 +596,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(54, 310);
+            this.btnThem.Location = new System.Drawing.Point(60, 429);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(68, 21);
@@ -603,7 +608,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 263);
+            this.label2.Location = new System.Drawing.Point(52, 287);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 24);
@@ -612,24 +617,65 @@
             // 
             // btnUploadImage
             // 
-            this.btnUploadImage.Location = new System.Drawing.Point(208, 265);
+            this.btnUploadImage.Location = new System.Drawing.Point(210, 289);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(153, 23);
             this.btnUploadImage.TabIndex = 68;
             this.btnUploadImage.Text = "Thêm ảnh";
             this.btnUploadImage.UseVisualStyleBackColor = true;
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(517, 337);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(210, 100);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(153, 20);
+            this.textBox1.TabIndex = 70;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(52, 100);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 24);
+            this.label5.TabIndex = 69;
+            this.label5.Text = "Mã sản phẩm";
+            // 
+            // picProductImage
+            // 
+            this.picProductImage.Location = new System.Drawing.Point(210, 318);
+            this.picProductImage.Name = "picProductImage";
+            this.picProductImage.Size = new System.Drawing.Size(153, 82);
+            this.picProductImage.TabIndex = 71;
+            this.picProductImage.TabStop = false;
             // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 480);
+            this.Controls.Add(this.picProductImage);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnUploadImage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.tabSanPham);
+            this.Controls.Add(this.tabSP);
             this.Controls.Add(this.cbLoaiSP);
             this.Controls.Add(this.tbMieuta);
             this.Controls.Add(this.tbGia);
@@ -662,7 +708,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabSanPham.ResumeLayout(false);
+            this.tabSP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picProductImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -712,11 +759,15 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabControl tabSanPham;
+        private System.Windows.Forms.TabControl tabSP;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnUploadImage;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox picProductImage;
     }
 }

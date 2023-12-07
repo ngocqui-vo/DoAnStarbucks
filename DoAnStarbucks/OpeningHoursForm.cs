@@ -38,6 +38,7 @@ namespace DoAnStarbucks
 
         private void OpeningHoursForm_Load(object sender, EventArgs e)
         {                      
+            dgvOH.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             LoadOpeningHours();
         }
         private void LoadOpeningHours()

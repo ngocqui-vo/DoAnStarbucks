@@ -30,7 +30,7 @@ namespace DoAnStarbucks.Repository
                 while (reader.Read())
                 {
                     Branch branch = new Branch();
-                    branch.ID = reader["opening_hours_id"].ToString();
+                    branch.ID = reader["branch_id"].ToString();
                     branch.Name = reader["name"].ToString();
                     branch.Address = reader["address"].ToString();
                     branch.Phone = reader["phone"].ToString();
@@ -65,7 +65,7 @@ namespace DoAnStarbucks.Repository
                 cmd.Parameters.AddWithValue("@phone", branch.Phone);
                 cmd.Parameters.AddWithValue("@email", branch.Email);
                 cmd.Parameters.AddWithValue("@opening_hours_id", branch.OpeningHourID);
-                cmd.Parameters.AddWithValue("@manager_id", branch.ManagerID);
+               
                 if (string.IsNullOrEmpty(branch.ManagerID) || branch.ManagerID == "Không")
                     cmd.Parameters.AddWithValue("@manager_id", DBNull.Value);
                 else

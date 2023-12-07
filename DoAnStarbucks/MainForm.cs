@@ -47,9 +47,7 @@ namespace DoAnStarbucks
 
         private void toolStripMenuItemCaLamViec_Click(object sender, EventArgs e)
         {
-            ShiftForm shift = new ShiftForm();
-            shift.MdiParent = this;
-            shift.Show();
+            
         }
 
         private void toolStripMenuItemPhuongThucThanhToan_Click(object sender, EventArgs e)

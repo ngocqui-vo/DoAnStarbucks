@@ -18,6 +18,7 @@ namespace DoAnStarbucks
         SqlConnection connection = Connect.GetConnection();
         BranchRepo branchRepo = new BranchRepo();
         OpeningHoursRepo openingHoursRepo = new OpeningHoursRepo();
+        EmployeeRepo employeeRepo = new EmployeeRepo();
         public BranchesForm()
         {
             InitializeComponent();
@@ -81,6 +82,7 @@ namespace DoAnStarbucks
         private void BranchesForm_Load(object sender, EventArgs e)
         {
             InitOpeningHoursComboBox();
+            InitEmployeeComboBox();
             LoadBranches();
         }
         
@@ -96,7 +98,18 @@ namespace DoAnStarbucks
             cbOpeningHours.DisplayMember = "Value";
             cbOpeningHours.ValueMember = "Key";
         }
-
+        private void InitEmployeeComboBox()
+        {
+            var employees = employeeRepo.GetAll();
+            List<KeyValuePair<string, string>> keyValuePairs = new List<KeyValuePair<string, string>>();
+            foreach (var item in employees)
+            {
+                keyValuePairs.Add(new KeyValuePair<string, string>(item.ID, item.Name));
+            }
+            cbManager.DataSource = new BindingSource(keyValuePairs, null);
+            cbManager.DisplayMember = "Value";
+            cbManager.ValueMember = "Key";
+        }
         private void btnXoa_Click(object sender, EventArgs e)
         {
             connection.Open();

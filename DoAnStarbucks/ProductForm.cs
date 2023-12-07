@@ -15,11 +15,22 @@ namespace DoAnStarbucks
         public ProductForm()
         {
             InitializeComponent();
+
+            
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        List<String> loaisp = new List<string>
         {
+            "loai 1", "loai 2", "loai 3"
+        };
 
+        private void btnUploadImage_Click(object sender, EventArgs e)
+        {
+            foreach (string loai in loaisp)
+            {
+                TabPage tabPage = new TabPage();
+                tabPage.Text = loai;
+                tabSP.TabPages.Add(tabPage);
+            }
         }
     }
 }

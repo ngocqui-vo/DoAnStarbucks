@@ -56,7 +56,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(852, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(877, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -177,7 +177,7 @@
             this.lbGioiThieu.ForeColor = System.Drawing.Color.Black;
             this.lbGioiThieu.Location = new System.Drawing.Point(0, 24);
             this.lbGioiThieu.Name = "lbGioiThieu";
-            this.lbGioiThieu.Size = new System.Drawing.Size(852, 39);
+            this.lbGioiThieu.Size = new System.Drawing.Size(877, 39);
             this.lbGioiThieu.TabIndex = 1;
             this.lbGioiThieu.Text = "Phần mềm quản lý chuỗi cà phê StarBuck";
             this.lbGioiThieu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,7 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(852, 496);
+            this.ClientSize = new System.Drawing.Size(877, 513);
             this.Controls.Add(this.lbGioiThieu);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;

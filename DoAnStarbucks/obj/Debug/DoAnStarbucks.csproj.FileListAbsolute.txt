@@ -18,7 +18,6 @@ D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Empl
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.OpeningHoursForm.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.OrderForm.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.SaleReportForm.resources
-D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.ShiftForm.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.PromotionForm.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.ProductTypeForm.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.PositionForm.resources

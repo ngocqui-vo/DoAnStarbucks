@@ -21,7 +21,8 @@ namespace DoAnStarbucks
         {
             InitializeComponent();
         }
-        private Employee GetEmployee()
+        
+        private void btnThem_Click(object sender, EventArgs e)
         {
             var emp = new Employee();
             emp.ID = txtID.Text;
@@ -32,17 +33,22 @@ namespace DoAnStarbucks
             emp.Salary = double.Parse(txtSalary.Text);
             emp.BrandID = cbBranches.SelectedValue.ToString();
             emp.PositionID = cbPositions.SelectedValue.ToString();
-            return emp;
-        }
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            employeeRepo.Add(GetEmployee());
+            employeeRepo.Add(emp);
             LoadEmployees();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            employeeRepo.Update(GetEmployee());
+            var emp = new Employee();
+            emp.ID = txtID.Text;
+            emp.Name = txtName.Text;
+            emp.Email = txtEmail.Text;
+            emp.Address = txtAddress.Text;
+            emp.Phone = txtPhone.Text;
+            emp.Salary = double.Parse(txtSalary.Text);
+            emp.BrandID = cbBranches.SelectedValue.ToString();
+            emp.PositionID = cbPositions.SelectedValue.ToString();
+            employeeRepo.Update(emp);
             LoadEmployees();
         }
 
