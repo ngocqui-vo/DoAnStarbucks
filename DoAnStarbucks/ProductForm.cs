@@ -18,19 +18,21 @@ namespace DoAnStarbucks
 
             
         }
-        List<String> loaisp = new List<string>
-        {
-            "loai 1", "loai 2", "loai 3"
-        };
+       
 
         private void btnUploadImage_Click(object sender, EventArgs e)
         {
-            foreach (string loai in loaisp)
-            {
-                TabPage tabPage = new TabPage();
-                tabPage.Text = loai;
-                tabSP.TabPages.Add(tabPage);
-            }
+            //saveFileDialogImage.Filter = "JPEG Image|*.jpg|PNG Image|*.png|Bitmap Image|*.bmp|GIF Image|*.gif";
+            //if (saveFileDialogImage.ShowDialog() == DialogResult.OK)
+            //{
+            //    string filePath = saveFileDialogImage.FileName;
+
+            //    // Lưu hình ảnh xuống đĩa
+            //    picProductImage.Image.Save(filePath);
+
+            //    MessageBox.Show("Hình ảnh đã được lưu thành công!");
+            //}
+
         }
     }
 }
