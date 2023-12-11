@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoAnStarbucks.Models
 {
-    internal class Customer
+    public class Customer
     {
         public string ID { get; set; }
         public string Name { get; set; }

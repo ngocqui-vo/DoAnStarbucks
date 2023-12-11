@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoAnStarbucks.Models
 {
-    internal class Position
+    public class Position
     {
         public string ID { get; set; }
         public string Name { get; set; }

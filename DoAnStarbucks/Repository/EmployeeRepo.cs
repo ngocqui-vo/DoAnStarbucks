@@ -52,6 +52,43 @@ namespace DoAnStarbucks.Repository
             connection.Close();
             return list;
         }
+        public Employee GetEmployee(string id)
+        {
+            Employee employee = new Employee();
+
+            connection.Open();
+
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_GetEmployee";
+            cmd.Parameters.AddWithValue("@employee_id", id);
+            var reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Read();
+                
+                employee.ID = reader["employee_id"].ToString();
+                employee.Name = reader["name"].ToString();
+                employee.Address = reader["address"].ToString();
+                employee.Phone = reader["phone"].ToString();
+                employee.Email = reader["email"].ToString();
+                employee.Salary = double.Parse(reader["salary"].ToString());
+
+                employee.BrandID = reader["branch_id"].ToString();
+                employee.Branch = new Branch();
+                employee.Branch.ID = employee.BrandID;
+                employee.Branch.Name = reader["branch_name"].ToString();
+                employee.Branch.Address = reader["branch_address"].ToString();
+
+                employee.PositionID = reader["position_id"].ToString();
+                employee.Position = new Position();
+                employee.Position.ID = employee.PositionID;
+                employee.Position.Name = reader["position_name"].ToString();
+                
+            }
+            connection.Close();
+            return employee;
+        }
 
         public void Add(Employee employee)
         {

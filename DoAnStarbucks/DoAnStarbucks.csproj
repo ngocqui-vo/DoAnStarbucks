@@ -70,8 +70,11 @@
     <Compile Include="Models\CustomerType.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\OpeningHour.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\PaymentMethod.cs" />
     <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductType.cs" />
     <Compile Include="Models\Promotion.cs" />
     <Compile Include="OpeningHoursForm.cs">
@@ -92,13 +95,21 @@
     <Compile Include="PaymentMethodForm.Designer.cs">
       <DependentUpon>PaymentMethodForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintOrderForm.Designer.cs">
+      <DependentUpon>PrintOrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\BranchRepo.cs" />
     <Compile Include="Repository\CustomerRepo.cs" />
     <Compile Include="Repository\CustomerTypeRepo.cs" />
     <Compile Include="Repository\EmployeeRepo.cs" />
     <Compile Include="Repository\OpeningHoursRepo.cs" />
+    <Compile Include="Repository\OrderRepo.cs" />
     <Compile Include="Repository\PaymentMethodRepo.cs" />
     <Compile Include="Repository\PositionRepo.cs" />
+    <Compile Include="Repository\ProductRepo.cs" />
     <Compile Include="Repository\ProductTypeRepo.cs" />
     <Compile Include="Repository\PromotionRepo.cs" />
     <Compile Include="SaleReportForm.cs">
@@ -178,6 +189,9 @@
     <EmbeddedResource Include="PaymentMethodForm.resx">
       <DependentUpon>PaymentMethodForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrintOrderForm.resx">
+      <DependentUpon>PrintOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaleReportForm.resx">
       <DependentUpon>SaleReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,8 +238,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

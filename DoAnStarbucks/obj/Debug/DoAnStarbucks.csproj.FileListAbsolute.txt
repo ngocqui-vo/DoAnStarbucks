@@ -22,3 +22,4 @@ D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.Prom
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.ProductTypeForm.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.PositionForm.resources
 D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.ProductForm.resources
+D:\NET projects\winform\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.PrintOrderForm.resources
