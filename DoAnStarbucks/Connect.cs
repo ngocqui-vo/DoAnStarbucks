@@ -10,6 +10,7 @@ namespace DoAnStarbucks
     internal class Connect
     {
         private static string connectionString = "Server=Lenovo\\SQLEXPRESS03;Database=starbuck;Trusted_Connection=True;";
+        
 
         public static SqlConnection GetConnection()
         {

@@ -28,43 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbTenKhuyenMai = new System.Windows.Forms.Label();
+            this.lbCodePromotion = new System.Windows.Forms.Label();
             this.lbBatDau = new System.Windows.Forms.Label();
             this.lbKetThuc = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.lbMieuTa = new System.Windows.Forms.Label();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.lbLoaiSp = new System.Windows.Forms.Label();
-            this.cbProductType = new System.Windows.Forms.ComboBox();
+            this.lbSp = new System.Windows.Forms.Label();
+            this.cbProduct = new System.Windows.Forms.ComboBox();
             this.labelID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.dgvPromotion = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtValue = new System.Windows.Forms.TextBox();
+            this.txtPromotionValue = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtUseNumber = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromotion)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbTenKhuyenMai
+            // lbCodePromotion
             // 
-            this.lbTenKhuyenMai.AutoSize = true;
-            this.lbTenKhuyenMai.Location = new System.Drawing.Point(46, 127);
-            this.lbTenKhuyenMai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTenKhuyenMai.Name = "lbTenKhuyenMai";
-            this.lbTenKhuyenMai.Size = new System.Drawing.Size(85, 13);
-            this.lbTenKhuyenMai.TabIndex = 1;
-            this.lbTenKhuyenMai.Text = "Tên Khuyến Mãi";
+            this.lbCodePromotion.AutoSize = true;
+            this.lbCodePromotion.Location = new System.Drawing.Point(46, 127);
+            this.lbCodePromotion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCodePromotion.Name = "lbCodePromotion";
+            this.lbCodePromotion.Size = new System.Drawing.Size(89, 13);
+            this.lbCodePromotion.TabIndex = 1;
+            this.lbCodePromotion.Text = "Code khuyến mãi";
             // 
             // lbBatDau
             // 
             this.lbBatDau.AutoSize = true;
-            this.lbBatDau.Location = new System.Drawing.Point(46, 196);
+            this.lbBatDau.Location = new System.Drawing.Point(46, 235);
             this.lbBatDau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbBatDau.Name = "lbBatDau";
             this.lbBatDau.Size = new System.Drawing.Size(74, 13);
@@ -74,7 +76,7 @@
             // lbKetThuc
             // 
             this.lbKetThuc.AutoSize = true;
-            this.lbKetThuc.Location = new System.Drawing.Point(46, 236);
+            this.lbKetThuc.Location = new System.Drawing.Point(46, 275);
             this.lbKetThuc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbKetThuc.Name = "lbKetThuc";
             this.lbKetThuc.Size = new System.Drawing.Size(82, 13);
@@ -83,24 +85,24 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(138, 269);
+            this.txtDescription.Location = new System.Drawing.Point(138, 308);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(151, 20);
             this.txtDescription.TabIndex = 2;
             // 
-            // txtName
+            // txtCode
             // 
-            this.txtName.Location = new System.Drawing.Point(138, 124);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(151, 20);
-            this.txtName.TabIndex = 2;
+            this.txtCode.Location = new System.Drawing.Point(138, 124);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(151, 20);
+            this.txtCode.TabIndex = 2;
             // 
             // lbMieuTa
             // 
             this.lbMieuTa.AutoSize = true;
-            this.lbMieuTa.Location = new System.Drawing.Point(46, 272);
+            this.lbMieuTa.Location = new System.Drawing.Point(46, 311);
             this.lbMieuTa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbMieuTa.Name = "lbMieuTa";
             this.lbMieuTa.Size = new System.Drawing.Size(46, 13);
@@ -110,7 +112,7 @@
             // dtpStart
             // 
             this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStart.Location = new System.Drawing.Point(138, 191);
+            this.dtpStart.Location = new System.Drawing.Point(138, 230);
             this.dtpStart.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(151, 20);
@@ -119,7 +121,7 @@
             // dtpEnd
             // 
             this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEnd.Location = new System.Drawing.Point(138, 231);
+            this.dtpEnd.Location = new System.Drawing.Point(138, 270);
             this.dtpEnd.Margin = new System.Windows.Forms.Padding(2);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(151, 20);
@@ -127,7 +129,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(212, 347);
+            this.btnXoa.Location = new System.Drawing.Point(212, 386);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(72, 24);
@@ -138,7 +140,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(134, 348);
+            this.btnCapNhat.Location = new System.Drawing.Point(134, 387);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(74, 23);
@@ -149,7 +151,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(62, 350);
+            this.btnThem.Location = new System.Drawing.Point(62, 389);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(68, 21);
@@ -158,22 +160,22 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // lbLoaiSp
+            // lbSp
             // 
-            this.lbLoaiSp.AutoSize = true;
-            this.lbLoaiSp.Location = new System.Drawing.Point(46, 306);
-            this.lbLoaiSp.Name = "lbLoaiSp";
-            this.lbLoaiSp.Size = new System.Drawing.Size(76, 13);
-            this.lbLoaiSp.TabIndex = 67;
-            this.lbLoaiSp.Text = "Loại sản phẩm";
+            this.lbSp.AutoSize = true;
+            this.lbSp.Location = new System.Drawing.Point(46, 345);
+            this.lbSp.Name = "lbSp";
+            this.lbSp.Size = new System.Drawing.Size(55, 13);
+            this.lbSp.TabIndex = 67;
+            this.lbSp.Text = "Sản phẩm";
             // 
-            // cbProductType
+            // cbProduct
             // 
-            this.cbProductType.FormattingEnabled = true;
-            this.cbProductType.Location = new System.Drawing.Point(138, 303);
-            this.cbProductType.Name = "cbProductType";
-            this.cbProductType.Size = new System.Drawing.Size(151, 21);
-            this.cbProductType.TabIndex = 68;
+            this.cbProduct.FormattingEnabled = true;
+            this.cbProduct.Location = new System.Drawing.Point(138, 342);
+            this.cbProduct.Name = "cbProduct";
+            this.cbProduct.Size = new System.Drawing.Size(151, 21);
+            this.cbProduct.TabIndex = 68;
             // 
             // labelID
             // 
@@ -226,49 +228,69 @@
             this.label4.TabIndex = 94;
             this.label4.Text = "Danh sách khuyến mãi";
             // 
-            // txtValue
+            // txtPromotionValue
             // 
-            this.txtValue.Location = new System.Drawing.Point(138, 158);
-            this.txtValue.Margin = new System.Windows.Forms.Padding(2);
-            this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(151, 20);
-            this.txtValue.TabIndex = 97;
+            this.txtPromotionValue.Location = new System.Drawing.Point(138, 197);
+            this.txtPromotionValue.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPromotionValue.Name = "txtPromotionValue";
+            this.txtPromotionValue.Size = new System.Drawing.Size(151, 20);
+            this.txtPromotionValue.TabIndex = 97;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 161);
+            this.label1.Location = new System.Drawing.Point(46, 200);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 96;
             this.label1.Text = "% khuyến mãi";
             // 
+            // txtUseNumber
+            // 
+            this.txtUseNumber.Location = new System.Drawing.Point(138, 161);
+            this.txtUseNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUseNumber.Name = "txtUseNumber";
+            this.txtUseNumber.Size = new System.Drawing.Size(151, 20);
+            this.txtUseNumber.TabIndex = 99;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(46, 164);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 98;
+            this.label2.Text = "Số lần sử dụng";
+            // 
             // PromotionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 492);
-            this.Controls.Add(this.txtValue);
+            this.Controls.Add(this.txtUseNumber);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPromotionValue);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvPromotion);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.cbProductType);
-            this.Controls.Add(this.lbLoaiSp);
+            this.Controls.Add(this.cbProduct);
+            this.Controls.Add(this.lbSp);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dtpEnd);
             this.Controls.Add(this.dtpStart);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtCode);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lbMieuTa);
             this.Controls.Add(this.lbKetThuc);
             this.Controls.Add(this.lbBatDau);
-            this.Controls.Add(this.lbTenKhuyenMai);
+            this.Controls.Add(this.lbCodePromotion);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PromotionForm";
             this.Text = "Khuyến Mãi";
@@ -280,25 +302,27 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lbTenKhuyenMai;
+        private System.Windows.Forms.Label lbCodePromotion;
         private System.Windows.Forms.Label lbBatDau;
         private System.Windows.Forms.Label lbKetThuc;
         private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label lbMieuTa;
         private System.Windows.Forms.DateTimePicker dtpStart;
         private System.Windows.Forms.DateTimePicker dtpEnd;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Label lbLoaiSp;
-        private System.Windows.Forms.ComboBox cbProductType;
+        private System.Windows.Forms.Label lbSp;
+        private System.Windows.Forms.ComboBox cbProduct;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.DataGridView dgvPromotion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtValue;
+        private System.Windows.Forms.TextBox txtPromotionValue;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtUseNumber;
+        private System.Windows.Forms.Label label2;
     }
 }

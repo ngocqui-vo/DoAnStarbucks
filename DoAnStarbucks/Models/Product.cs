@@ -15,5 +15,9 @@ namespace DoAnStarbucks.Models
         public string Image { get; set; }
         public string ProductTypeID { get; set; }
         public ProductType ProductType { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

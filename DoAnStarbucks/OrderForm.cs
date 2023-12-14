@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -20,7 +21,10 @@ namespace DoAnStarbucks
         CustomerRepo customerRepo = new CustomerRepo();
         EmployeeRepo employeeRepo = new EmployeeRepo();
         PaymentMethodRepo paymentMethodRepo = new PaymentMethodRepo();
+        PromotionRepo promotionRepo = new PromotionRepo();
         OrderRepo orderRepo = new OrderRepo();
+        BranchRepo branchRepo = new BranchRepo();
+
         public OrderForm()
         {
             InitializeComponent();
@@ -28,8 +32,10 @@ namespace DoAnStarbucks
 
         private void OrderForm_Load(object sender, EventArgs e)
         {
+            InitBranchComboBox();
+            cbBranches.SelectedIndex = 0;
             InitCustomerComboBox();
-            InitEmployeeComboBox();
+            
             InitPaymentMethodComboBox();
             InitDgvOrderDetail();
             
@@ -44,6 +50,19 @@ namespace DoAnStarbucks
             }
         }
 
+        private void InitBranchComboBox()
+        {
+            var branches = branchRepo.GetAll();
+            List<KeyValuePair<string, string>> keyValuePairs = new List<KeyValuePair<string, string>>();
+            foreach (var item in branches)
+            {
+                keyValuePairs.Add(new KeyValuePair<string, string>(item.ID, item.Name));
+            }
+            cbBranches.DataSource = new BindingSource(keyValuePairs, null);
+            cbBranches.DisplayMember = "Value";
+            cbBranches.ValueMember = "Key";
+        }
+
         private void Tab_Enter(object sender, EventArgs e)
         {
             TabPage tab = sender as TabPage;
@@ -54,12 +73,13 @@ namespace DoAnStarbucks
             foreach (var product in listProducts)
             {
                 Panel panel = new Panel();
-                panel.Width = 200;
+                panel.Width = 100;
                 panel.Height = 100;
                 panel.Tag = productTypeID;
+                
 
                 Button btn = new Button();
-                btn.Width = 80;
+                btn.Width = 100;
                 btn.Height = 80;
                 btn.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "SavedImages", product.Image));
                 btn.BackgroundImageLayout = ImageLayout.Zoom;
@@ -110,9 +130,10 @@ namespace DoAnStarbucks
             }
             if (isExistInDgvOrder == false)
             {
-                dgvOrder.Rows.Add(product.ID, product.Name, product.Price, 1, product.Price);
+                dgvOrder.Rows.Add(product.ID, product.Name, product.Price, product.Price,1, product.Price);
             }
             txtTotalPrice.Text = CalcTotalPrice().ToString();
+            txtTotalPriceDiscount.Text = CalcTotalPriceDiscount().ToString();
         }
         private void InitDgvOrderDetail()
         {
@@ -120,12 +141,15 @@ namespace DoAnStarbucks
             dgvOrder.Columns.Add("ID", "ID");
             dgvOrder.Columns.Add("Name", "Tên sản phẩm");
             dgvOrder.Columns.Add("Price", "Đơn giá");
+            dgvOrder.Columns.Add("PricePromotion", "Giá khuyến mãi");
             dgvOrder.Columns.Add("Quantity", "Số lượng");
             dgvOrder.Columns.Add("TotalValue", "Thành tiền");
+            //dgvOrder.Columns.Add("TotalValueAfterDiscount", "")
 
             dgvOrder.Columns["ID"].ReadOnly = true;
             dgvOrder.Columns["Name"].ReadOnly = true;
             dgvOrder.Columns["Price"].ReadOnly = true;
+            dgvOrder.Columns["PricePromotion"].ReadOnly = true;
             dgvOrder.Columns["Quantity"].ReadOnly = false;
             dgvOrder.Columns["TotalValue"].ReadOnly = true;
         }
@@ -149,16 +173,18 @@ namespace DoAnStarbucks
         {
             var row = dgvOrder.Rows[e.RowIndex];
             int quantity = int.Parse(row.Cells["Quantity"].Value.ToString());
-            decimal price = decimal.Parse(row.Cells["Price"].Value.ToString());
+            decimal price = decimal.Parse(row.Cells["PricePromotion"].Value.ToString());
             row.Cells["TotalValue"].Value = price * quantity;
             txtTotalPrice.Text = CalcTotalPrice().ToString();
+            txtTotalPriceDiscount.Text = CalcTotalPriceDiscount().ToString();
         }
-
+        string order_id;
         private void btnBuy_Click(object sender, EventArgs e)
         {
             Order order = new Order();
             
             order.TotalValue = decimal.Parse(txtTotalPrice.Text);
+            order.TotalValueDiscount = decimal.Parse(txtTotalPriceDiscount.Text);
             order.Status = "Success";
 
             order.EmployeeID = cbEmployee.Text;
@@ -166,25 +192,40 @@ namespace DoAnStarbucks
             order.PaymentMethodID = cbPaymentMethod.SelectedValue.ToString();
             order.OrderDateTime = DateTime.Now;
             Order orderInserted = orderRepo.Add(order);
-            List<OrderDetails> orderDetailsList = new List<OrderDetails>();
+
             for (int i = 0; i < dgvOrder.Rows.Count-1; i++)
             {
                 OrderDetails orderDetails = new OrderDetails();
                 orderDetails.OrderID = orderInserted.ID;
+                order_id = orderDetails.OrderID;
                 orderDetails.ProductID = dgvOrder.Rows[i].Cells["ID"].Value.ToString();
-                orderDetails.Quantity = int.Parse(dgvOrder.Rows[i].Cells["Quantity"].Value.ToString());
+                orderDetails.Quantity = int.Parse(dgvOrder.Rows[i].Cells["Quantity"].Value.ToString());               
+                orderDetails.ProductPriceDiscount = decimal.Parse(dgvOrder.Rows[i].Cells["PricePromotion"].Value.ToString());
                 orderDetails.Product = new Product();
                 orderDetails.Product.ID = orderDetails.ProductID = dgvOrder.Rows[i].Cells["ID"].Value.ToString();
                 orderDetails.Product.Name = dgvOrder.Rows[i].Cells["Name"].Value.ToString();
                 orderDetails.Product.Price = decimal.Parse(dgvOrder.Rows[i].Cells["Price"].Value.ToString());
+                decimal totalValue = orderDetails.Product.Price * orderDetails.Quantity;
+                decimal totalValueDiscount = decimal.Parse(dgvOrder.Rows[i].Cells["TotalValue"].Value.ToString());
+                orderDetails.TotalValue = totalValue;
+                orderDetails.TotalValueDiscount = totalValueDiscount;
                 orderRepo.AddOrderDetails(orderDetails);
-                orderDetailsList.Add(orderDetails);
             }
-            //orderRepo.GetOrderDetail(orderInserted);
-            orderInserted.OrderDetails = orderDetailsList;
+            orderRepo.GetOrderDetail(orderInserted);
+
             var employee = employeeRepo.GetEmployee(cbEmployee.Text);
-            PrintOrderForm f = new PrintOrderForm(employee, orderInserted);
-            f.ShowDialog();
+            promotionRepo.DecreseUseNumber(txtVoucher.Text);
+            
+            FormClear();
+            MessageBox.Show("Đặt món thành công!", "Thông báo");
+        }
+        private void FormClear()
+        {
+            dgvOrder.Rows.Clear();
+            txtTotalPrice.Clear();
+            txtTotalPriceDiscount.Clear();
+            txtTotalPrice.Clear();
+            txtVoucher.Clear();
         }
         private void InitCustomerComboBox()
         {
@@ -195,9 +236,10 @@ namespace DoAnStarbucks
                 cbCustomer.Items.Add(customer.ID);
             }
         }
-        private void InitEmployeeComboBox()
+        private void InitEmployeeComboBox(string branchID)
         {
-            var list = employeeRepo.GetAll();
+            cbEmployee.Items.Clear();
+            var list = employeeRepo.GetAllEmployeeInBranchID(branchID);
             foreach (var customer in list)
             {
                 cbEmployee.Items.Add(customer.ID);
@@ -220,6 +262,19 @@ namespace DoAnStarbucks
             decimal total = 0;
             for (int i = 0; i < dgvOrder.Rows.Count - 1; i++)
             {
+                //decimal currentPrice = decimal.Parse(dgvOrder.Rows[i].Cells["TotalValue"].Value.ToString());
+                //total += currentPrice;
+                decimal price = decimal.Parse(dgvOrder.Rows[i].Cells["Price"].Value.ToString());
+                decimal quantity = int.Parse(dgvOrder.Rows[i].Cells["Quantity"].Value.ToString());
+                total += price * quantity;
+            }
+            return total;
+        }
+        private decimal CalcTotalPriceDiscount()
+        {
+            decimal total = 0;
+            for (int i = 0; i < dgvOrder.Rows.Count - 1; i++)
+            {
                 decimal currentPrice = decimal.Parse(dgvOrder.Rows[i].Cells["TotalValue"].Value.ToString());
                 total += currentPrice;
             }
@@ -227,17 +282,80 @@ namespace DoAnStarbucks
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {           
+            btnDelete.PerformClick();
+        }
+
+        private void txtVoucher_Leave(object sender, EventArgs e)
         {
+            Promotion promotion = promotionRepo.Get(txtVoucher.Text);
+            if (promotion.IsValid)
+            {
+                for (int i = 0; i < dgvOrder.Rows.Count - 1; i++)
+                {
+                    var row = dgvOrder.Rows[i];
+                    if (row.Cells["ID"].Value.ToString() == promotion.ProductID)
+                    {
+                        decimal currentPrice = decimal.Parse(row.Cells["Price"].Value.ToString());
+                        row.Cells["PricePromotion"].Value = currentPrice * (100 - (decimal)promotion.PromotionValue) / 100;
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < dgvOrder.Rows.Count - 1; i++)
+                {
+                    var row = dgvOrder.Rows[i];
+                    if (row.Cells["ID"].Value.ToString() == promotion.ProductID)
+                    {
+                        decimal currentPrice = decimal.Parse(row.Cells["Price"].Value.ToString());
+                        row.Cells["PricePromotion"].Value = currentPrice;
+                    }
+                }
+                MessageBox.Show("Code đã hết lượt hoặc hết hạn sử dụng!!!", "Lỗi");
+                txtVoucher.Text = string.Empty;
+            }
+
+        }
+
+        private void cbBranches_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string branchID = cbBranches.SelectedValue.ToString();
+            InitEmployeeComboBox(branchID);
+        }
+
+        private void btnPrintOrder_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlConnection = Connect.GetConnection();
             try
             {
-                var rowIndex = dgvOrder.SelectedCells[0].RowIndex;
-                var row = dgvOrder.Rows[rowIndex];
-                dgvOrder.Rows.Remove(row);
-            }
-            catch (Exception)
-            {
 
-                MessageBox.Show("Lỗi không xóa được!!!", "Lỗi");
+                sqlConnection.Open();
+                var cmd = sqlConnection.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_PrintOrder";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@order_id", order_id);
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd;
+                DataTable dt = new DataTable();
+                adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+
+                rptPrintOrder r = new rptPrintOrder();
+                r.SetDataSource(dt);
+                PrintOrderForm f = new PrintOrderForm();
+                f.crystalReportViewer1.ReportSource = r;
+                f.ShowDialog();
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show("Lỗi " + f, "Thông báo");
+
+            }
+            finally
+            {
+                sqlConnection.Close();
             }
         }
     }

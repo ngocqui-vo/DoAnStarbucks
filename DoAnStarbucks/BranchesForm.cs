@@ -61,7 +61,7 @@ namespace DoAnStarbucks
             branch.Phone = txtPhone.Text;
             branch.Email = txtEmail.Text;
             branch.OpeningHourID = cbOpeningHours.SelectedValue.ToString();
-            branch.ManagerID = cbManager.Text;
+            branch.ManagerID = cbManager.SelectedValue.ToString();
             branchRepo.Add(branch);
             LoadBranches(); 
 
@@ -118,6 +118,7 @@ namespace DoAnStarbucks
             cmd.CommandText = "sp_DeleteBranch";
             cmd.Parameters.AddWithValue("@branch_id", txtID.Text);
             cmd.ExecuteNonQuery();
+            LoadBranches();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -129,7 +130,7 @@ namespace DoAnStarbucks
             branch.Phone = txtPhone.Text;
             branch.Email = txtEmail.Text;
             branch.OpeningHourID = cbOpeningHours.SelectedValue.ToString();
-            branch.ManagerID = cbManager.Text;
+            branch.ManagerID = cbManager.SelectedValue.ToString();
 
             branchRepo.Update(branch);
             LoadBranches();

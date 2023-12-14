@@ -12,6 +12,7 @@ namespace DoAnStarbucks.Models
         public string Status { get; set; }
         public DateTime OrderDateTime { get; set; }
         public decimal TotalValue { get; set; }
+        public decimal TotalValueDiscount { get; set; }
         public string CustomerID { get; set; }
         public Customer Customer { get; set; }
         public string EmployeeID { get; set; }

@@ -30,20 +30,51 @@ namespace DoAnStarbucks.Repository
                 {
                     Promotion promotion = new Promotion();
                     promotion.ID = reader["promotion_id"].ToString();
-                    promotion.Name = reader["promotion_name"].ToString();
-                    promotion.PromotionValue = reader["promotion_value"].ToString();
+                    promotion.Code = reader["promotion_code"].ToString();
+                    promotion.PromotionValue = float.Parse(reader["promotion_value"].ToString());
+                    promotion.UseNumber = int.Parse(reader["use_number"].ToString());
                     promotion.StartDate = DateTime.Parse(reader["start_date"].ToString());
                     promotion.EndDate = DateTime.Parse(reader["end_date"].ToString());
                     promotion.Description = reader["promotion_description"].ToString();
-                    promotion.ProductTypeID = reader["product_type_id"].ToString();
-                    promotion.ProductType = new ProductType();
-                    promotion.ProductType.Name = reader["product_type_name"].ToString();
+                    promotion.ProductID = reader["product_id"].ToString();
+                    promotion.Product = new Product();
+                    promotion.Product.Name = reader["product_name"].ToString();
 
                     list.Add(promotion);
                 }
             }
             connection.Close();
             return list;
+        }
+        public Promotion Get(string code)
+        {
+            Promotion promotion = new Promotion();
+            connection.Open();
+
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select pm.*, p.name as 'product_name' from Promotion pm " +
+                "join Products p on p.product_id = pm.product_id where promotion_code = @promotion_code";
+            cmd.Parameters.AddWithValue("@promotion_code", code);
+
+            var reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Read();
+                    
+                promotion.ID = reader["promotion_id"].ToString();
+                promotion.Code = reader["promotion_code"].ToString();
+                promotion.PromotionValue = float.Parse(reader["promotion_value"].ToString());
+                promotion.UseNumber = int.Parse(reader["use_number"].ToString());
+                promotion.StartDate = DateTime.Parse(reader["start_date"].ToString());
+                promotion.EndDate = DateTime.Parse(reader["end_date"].ToString());
+                promotion.Description = reader["promotion_description"].ToString();
+                promotion.ProductID = reader["product_id"].ToString();
+                promotion.Product = new Product();
+                promotion.Product.Name = reader["product_name"].ToString();               
+            }
+            connection.Close();
+            return promotion;
         }
 
         public void Add(Promotion promotion)
@@ -56,12 +87,13 @@ namespace DoAnStarbucks.Repository
                 cmd.CommandText = "sp_CreatePromotion";
 
                 cmd.Parameters.AddWithValue("@promotion_id", promotion.ID);
-                cmd.Parameters.AddWithValue("@promotion_name", promotion.Name);
+                cmd.Parameters.AddWithValue("@promotion_code", promotion.Code);
+                cmd.Parameters.AddWithValue("@use_number", promotion.UseNumber);
                 cmd.Parameters.AddWithValue("@promotion_value", promotion.PromotionValue);
                 cmd.Parameters.AddWithValue("@start_date", promotion.StartDate.ToShortDateString());
                 cmd.Parameters.AddWithValue("@end_date", promotion.EndDate.ToShortDateString());
                 cmd.Parameters.AddWithValue("@promotion_description", promotion.Description);
-                cmd.Parameters.AddWithValue("@product_type_id", promotion.ProductTypeID);          
+                cmd.Parameters.AddWithValue("@product_id", promotion.ProductID);          
 
                 cmd.ExecuteNonQuery();
             }
@@ -81,12 +113,13 @@ namespace DoAnStarbucks.Repository
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_UpdatePromotion";
             cmd.Parameters.AddWithValue("@promotion_id", promotion.ID);
-            cmd.Parameters.AddWithValue("@promotion_name", promotion.Name);
+            cmd.Parameters.AddWithValue("@promotion_code", promotion.Code);
+            cmd.Parameters.AddWithValue("@use_number", promotion.UseNumber);
             cmd.Parameters.AddWithValue("@promotion_value", promotion.PromotionValue);
             cmd.Parameters.AddWithValue("@start_date", promotion.StartDate.ToShortDateString());
             cmd.Parameters.AddWithValue("@end_date", promotion.EndDate.ToShortDateString());
             cmd.Parameters.AddWithValue("@promotion_description", promotion.Description);
-            cmd.Parameters.AddWithValue("@product_type_id", promotion.ProductTypeID);
+            cmd.Parameters.AddWithValue("@product_id", promotion.ProductID);
             cmd.ExecuteNonQuery();
             connection.Close();
         }
@@ -104,6 +137,28 @@ namespace DoAnStarbucks.Repository
             catch (Exception)
             {
                 MessageBox.Show("Xóa thất bại!", "Lỗi", MessageBoxButtons.OK);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public void DecreseUseNumber(string code)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "update Promotion " +
+                    "set use_number = use_number - 1 " +
+                    "where promotion_code = @promotion_code";
+                cmd.Parameters.AddWithValue("@promotion_code", code);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Cập nhật thất bại!\n" + e, "Lỗi", MessageBoxButtons.OK);
             }
             finally
             {

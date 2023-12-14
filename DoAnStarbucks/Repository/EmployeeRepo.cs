@@ -52,6 +52,45 @@ namespace DoAnStarbucks.Repository
             connection.Close();
             return list;
         }
+        internal List<Employee> GetAllEmployeeInBranchID(string branchID)
+        {
+            var list = new List<Employee>();
+
+            connection.Open();
+
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select e.*, b.name as 'branch_name' from Employees e " +
+                "join Branches b on e.branch_id = b.branch_id " +
+                "where e.branch_id = @branch_id";
+            cmd.Parameters.AddWithValue("@branch_id", branchID);
+
+            var reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    var employee = new Employee();
+                    employee.ID = reader["employee_id"].ToString();
+                    employee.Name = reader["name"].ToString();
+                    employee.Address = reader["address"].ToString();
+                    employee.Phone = reader["phone"].ToString();
+                    employee.Email = reader["email"].ToString();
+                    employee.Salary = double.Parse(reader["salary"].ToString());
+
+                    employee.BrandID = reader["branch_id"].ToString();
+                    employee.Branch = new Branch();
+                    employee.Branch.ID = employee.BrandID;
+                    employee.Branch.Name = reader["branch_name"].ToString();
+
+                    
+                    list.Add(employee);
+                }
+            }
+            connection.Close();
+            return list;
+        }
+
         public Employee GetEmployee(string id)
         {
             Employee employee = new Employee();
@@ -109,9 +148,9 @@ namespace DoAnStarbucks.Repository
                 cmd.Parameters.AddWithValue("@position_id", employee.PositionID);
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show("Thêm thất bại! Hãy đảm bảo không trùng ID", "Lỗi", MessageBoxButtons.OK);
+                MessageBox.Show("Thêm thất bại! Hãy đảm bảo không trùng ID\n" + e, "Lỗi", MessageBoxButtons.OK);
             }
             finally
             {
@@ -156,5 +195,6 @@ namespace DoAnStarbucks.Repository
                 connection.Close();
             }
         }
+
     }
 }

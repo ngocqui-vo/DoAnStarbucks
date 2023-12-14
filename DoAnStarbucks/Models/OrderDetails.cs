@@ -13,6 +13,8 @@ namespace DoAnStarbucks.Models
         public string ProductID { get; set; }
         public Product Product { get; set; }
         public int Quantity { get; set; }
-        public decimal TotalValue { get => Product.Price * Quantity; }
+        public decimal ProductPriceDiscount { get; set; }
+        public decimal TotalValue { get; set; }
+        public decimal TotalValueDiscount { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace DoAnStarbucks
 {
     public partial class PromotionForm : Form
     {
-        ProductTypeRepo productTypeRepo = new ProductTypeRepo();
+        ProductRepo productRepo = new ProductRepo();
         PromotionRepo promotionRepo = new PromotionRepo();
         public PromotionForm()
         {
@@ -22,35 +22,37 @@ namespace DoAnStarbucks
         }
         private void InitProductTypeComboBox()
         {
-            var productTypeList = productTypeRepo.GetAll();
+            var productList = productRepo.GetAll();
             List<KeyValuePair<string, string>> keyValuePairs = new List<KeyValuePair<string, string>>();
-            foreach (var item in productTypeList)
+            foreach (var item in productList)
             {
                 keyValuePairs.Add(new KeyValuePair<string, string>(item.ID, item.Name));
             }
-            cbProductType.DataSource = new BindingSource(keyValuePairs, null);
-            cbProductType.DisplayMember = "Value";
-            cbProductType.ValueMember = "Key";
+            cbProduct.DataSource = new BindingSource(keyValuePairs, null);
+            cbProduct.DisplayMember = "Value";
+            cbProduct.ValueMember = "Key";
         }
         private void LoadPromotions()
         {
             var promotions = promotionRepo.GetAll().Select(p => new
             {
                 p.ID,
-                p.Name,
+                p.Code,
+                p.UseNumber,
                 p.PromotionValue,
                 StartDate = p.StartDate.ToShortDateString(),
                 EndDate = p.EndDate.ToShortDateString(),
                 p.Description,
-                p.ProductType
+                p.Product
             }).ToList();
             dgvPromotion.DataSource = promotions;
-            dgvPromotion.Columns["Name"].HeaderText = "Tên khuyến mãi";
+            dgvPromotion.Columns["Code"].HeaderText = "Code khuyến mãi";
+            dgvPromotion.Columns["UseNumber"].HeaderText = "Số lần sử dụng";
             dgvPromotion.Columns["PromotionValue"].HeaderText = "% khuyến mãi";
             dgvPromotion.Columns["StartDate"].HeaderText = "Ngày bắt đầu";
             dgvPromotion.Columns["EndDate"].HeaderText = "Ngày kết thúc";
             dgvPromotion.Columns["Description"].HeaderText = "Mô tả";
-            dgvPromotion.Columns["ProductType"].HeaderText = "Loại sản phẩm";
+            dgvPromotion.Columns["Product"].HeaderText = "Sản phẩm";
         }
         private void PromotionForm_Load(object sender, EventArgs e)
         {
@@ -62,12 +64,13 @@ namespace DoAnStarbucks
         {
             var promotion = new Promotion();
             promotion.ID = txtID.Text;
-            promotion.Name = txtName.Text;
+            promotion.Code = txtCode.Text;
+            promotion.UseNumber = int.Parse(txtUseNumber.Text);
             promotion.Description = txtDescription.Text;
-            promotion.PromotionValue = txtValue.Text;
+            promotion.PromotionValue = float.Parse(txtPromotionValue.Text);
             promotion.StartDate = dtpStart.Value;
             promotion.EndDate = dtpEnd.Value;
-            promotion.ProductTypeID = cbProductType.SelectedValue.ToString();
+            promotion.ProductID = cbProduct.SelectedValue.ToString();
             return promotion;
         }
         private void btnThem_Click(object sender, EventArgs e)
@@ -92,8 +95,8 @@ namespace DoAnStarbucks
         {
             var row = dgvPromotion.Rows[e.RowIndex];
             txtID.Text = row.Cells["ID"].Value.ToString();
-            txtName.Text = row.Cells["Name"].Value.ToString();
-            txtValue.Text = row.Cells["PromotionValue"].Value.ToString();
+            txtCode.Text = row.Cells["Code"].Value.ToString();
+            txtPromotionValue.Text = row.Cells["PromotionValue"].Value.ToString();
             txtDescription.Text = row.Cells["Description"].Value.ToString();
             dtpStart.Value = DateTime.Parse(row.Cells["StartDate"].Value.ToString());
             dtpEnd.Value = DateTime.Parse(row.Cells["EndDate"].Value.ToString());

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,7 @@ namespace DoAnStarbucks
         {
             OrderForm order = new OrderForm();
             order.MdiParent = this;
+            order.WindowState = FormWindowState.Maximized;
             order.Show();
         }
 
@@ -74,7 +76,9 @@ namespace DoAnStarbucks
 
         private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            StatisticRevenue statisticRevenue = new StatisticRevenue();
 
+            statisticRevenue.Show();
         }
 
         private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,6 +107,41 @@ namespace DoAnStarbucks
             PaymentMethodForm paymentMethodForm = new PaymentMethodForm();
             paymentMethodForm.MdiParent = this;
             paymentMethodForm.Show();
+        }
+
+        private void thốngKêSốLượngSảnPhẩmNhânViênBánĐượcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlConnection = Connect.GetConnection();
+            try
+            {
+
+                sqlConnection.Open();
+                var cmd = sqlConnection.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_ThongKeSoLuongSanPhamNhanVien";
+                cmd.Parameters.Clear();
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd;
+                DataTable dt = new DataTable();
+                adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+
+                rptProductSell r = new rptProductSell();
+                r.SetDataSource(dt);
+                ReportProductSell f = new ReportProductSell();
+
+                f.crystalReportViewer1.ReportSource = r;
+                f.ShowDialog();
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show("Lỗi " + f, "Thông báo");
+
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
         }
     }
 }
