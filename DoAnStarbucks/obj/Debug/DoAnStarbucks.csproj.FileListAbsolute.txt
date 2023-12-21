@@ -33,7 +33,6 @@ D:\NET projects\winform\DoAnNhom8\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStar
 D:\NET projects\winform\DoAnNhom8\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.PaymentMethodForm.resources
 D:\NET projects\winform\DoAnNhom8\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.PrintOrderForm.resources
 D:\NET projects\winform\DoAnNhom8\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.SaleReportForm.resources
-D:\NET projects\winform\DoAnNhom8\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.LoginForm.resources
 D:\NET projects\winform\DoAnNhom8\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.PromotionForm.resources
 D:\NET projects\winform\DoAnNhom8\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.ProductTypeForm.resources
 D:\NET projects\winform\DoAnNhom8\DoAnStarbucks\DoAnStarbucks\obj\Debug\DoAnStarbucks.MainForm.resources

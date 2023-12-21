@@ -61,5 +61,10 @@ namespace DoAnStarbucks
             txtID.Text = row.Cells["ID"].Value.ToString();
             txtTenPTThanhToan.Text = row.Cells["Name"].Value.ToString();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

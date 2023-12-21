@@ -165,7 +165,10 @@ namespace DoAnStarbucks.Repository
             cmd.Parameters.AddWithValue("@name", product.Name);
             cmd.Parameters.AddWithValue("@price", product.Price);
             cmd.Parameters.AddWithValue("@description", product.Description);
-            cmd.Parameters.AddWithValue("@image", product.Image);
+            if (product.Image == null)
+                cmd.Parameters.AddWithValue("@image", "notfound.jpg");
+            else
+                cmd.Parameters.AddWithValue("@image", product.Image);
             cmd.Parameters.AddWithValue("@product_type_id", product.ProductTypeID);
             cmd.ExecuteNonQuery();
             connection.Close();

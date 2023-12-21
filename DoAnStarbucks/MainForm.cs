@@ -71,6 +71,7 @@ namespace DoAnStarbucks
         {
             ProductForm sanPham = new ProductForm();
             sanPham.MdiParent = this;
+            sanPham.WindowState = FormWindowState.Maximized;
             sanPham.Show();
         }
 
